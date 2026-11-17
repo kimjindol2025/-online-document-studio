@@ -1,0 +1,24 @@
+;; FreeLang v11/FX: deterministic document validation contracts (runtime-probed)
+;; Browser runtime / FreeLang Front integration remains a separate task.
+(defn required [value]
+  (if (= value "") "ERROR:REQUIRED" "OK"))
+(defn positive-amount [value]
+  (if (number? value)
+    (if (> value 0) "OK" "ERROR:AMOUNT_MUST_BE_POSITIVE")
+    "ERROR:INVALID_AMOUNT"))
+(defn receipt-result [payer payee amount]
+  (if (= (required payer) "OK")
+    (if (= (required payee) "OK")
+      (positive-amount amount)
+      "ERROR:PAYEE_REQUIRED")
+    "ERROR:PAYER_REQUIRED"))
+(println (required "홍길동"))
+(println (required ""))
+(println (positive-amount 100000))
+(println (positive-amount 0))
+(println (positive-amount -1))
+(println (positive-amount "100000"))
+(println (receipt-result "홍길동" "김민수" 50000))
+(println (receipt-result "" "김민수" 50000))
+(println (receipt-result "홍길동" "" 50000))
+(println (receipt-result "홍길동" "김민수" -3))

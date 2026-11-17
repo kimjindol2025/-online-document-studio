@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "meeting-notes",
+  "slug": "meeting-notes",
+  "title": "회의록 (확장성 테스트)",
+  "category": "업무·기록",
+  "status": "internal",
+  "icon": "notebook-pen",
+  "summary": "문서 엔진 설정만 추가했을 때 작동하는지 확인하는 비공개 테스트.",
+  "purpose": "기술 검증용",
+  "notice": "공식 문서가 아닌 기술 검증 시안입니다.",
+  "layout": "narrative",
+  "fields": [
+    {
+      "id": "topic",
+      "label": "회의 제목",
+      "type": "text",
+      "required": true,
+      "group": "기본 정보"
+    },
+    {
+      "id": "date",
+      "label": "회의일",
+      "type": "date",
+      "required": true,
+      "group": "기본 정보"
+    },
+    {
+      "id": "attendees",
+      "label": "참석자",
+      "type": "textarea",
+      "group": "기본 정보",
+      "rows": 2
+    },
+    {
+      "id": "items",
+      "label": "논의 항목",
+      "type": "repeater",
+      "group": "논의",
+      "columns": [
+        {
+          "id": "agenda",
+          "label": "안건",
+          "required": true
+        },
+        {
+          "id": "result",
+          "label": "결정 사항"
+        }
+      ],
+      "initialRows": 1
+    },
+    {
+      "id": "next",
+      "label": "후속 조치",
+      "type": "textarea",
+      "group": "후속",
+      "rows": 3
+    }
+  ],
+  "seo": {
+    "title": "내부 테스트 회의록",
+    "description": "공개되지 않는 검증용 문서"
+  }
+}

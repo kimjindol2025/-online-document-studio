@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="양식을 내려받지 않고 바로 작성하세요. 무료 이력서·시말서·영수증 작성, 기기 내 보관, 인쇄·PDF 저장.">
+<meta name="robots" content="noindex">
+<title>무료 온라인 문서 작성기 · 191 개발 시제품</title>
+<link rel="stylesheet" href="./styles.css">
+<script src="./app.mjs" type="module"></script>
+</head>
+<body>
+<header class="app-topbar">
+  <a class="brand" href="./index.html" aria-label="문서 한 장 홈"><span class="brand-mark">▤</span><span>문서 한 장 <span style="font-weight:500;color:#8c98a8;font-size:12px">BETA</span></span></a>
+  <span class="top-meta">무료 · 회원가입 없음 · 로컬 작성 시제품</span>
+</header>
+<div class="app-shell">
+  <aside class="nav-side">
+    <div class="eyebrow">DOCUMENT STUDIO</div>
+    <h2 class="nav-title">어떤 문서가 필요하세요?</h2>
+    <label class="search-wrap">⌕ <input id="doc-search" type="search" placeholder="문서 이름 검색" aria-label="문서 검색"></label>
+    <nav id="doc-list" class="doc-list" aria-label="문서 선택"></nav>
+    <div class="trust-card"><strong>🔒 문서 내용은 내 기기에</strong>별도 서버 업로드 기능은 구현하지 않았습니다. 보안 네트워크 검증 전의 시제품입니다. 임시 보관은 이 브라우저에만 남으므로 공용 PC에서는 사용 후 삭제하고, 중요한 문서는 백업 파일을 따로 보관하세요.</div>
+  </aside>
+  <main class="main">
+    <div class="main-head"><div><div class="eyebrow">질문으로 간편하게</div><h1 id="doc-title">내 문서 만들기</h1><p id="doc-summary">필요한 내용을 입력하고 바로 인쇄하거나 PDF로 저장하세요.</p></div><span class="head-label">✓ 무료 작성 · 로컬 시제품</span></div>
+    <div class="mobile-join"><button type="button" class="btn outline" id="mobile-edit">✎ 입력</button><button type="button" class="btn outline" id="mobile-preview">▤ 미리보기</button></div>
+    <div class="editor-workspace">
+      <section class="panel editor-panel" id="editor-panel" aria-label="문서 입력">
+        <div class="pane-head"><h2>01. 내용 입력</h2><p>표시된 질문에 답해주세요. 내용은 자동으로 임시 보관됩니다.</p></div>
+        <form id="doc-form" novalidate><div class="form-scroll" id="form-fields"></div></form>
+        <div class="action-bar">
+          <div class="primary-actions">
+            <button type="button" class="btn primary" id="print-button">⎙ 인쇄 · PDF 저장</button>
+            <button type="button" class="btn outline" id="blank-button">▤ 빈 양식 출력</button>
+          </div>
+          <div class="aux-actions">
+            <button type="button" class="btn ghost" id="backup-button">↓ 편집본 백업</button>
+            <button type="button" class="btn ghost" id="import-button">↑ 백업 불러오기</button>
+            <button type="button" class="btn ghost" id="clear-button">↻ 초기화</button>
+          </div>
+          <input class="file-input" id="import-file" type="file" accept=".json,application/json" aria-label="백업 JSON 파일">
+          <div class="status-note" role="status" aria-live="polite" id="status">작성을 시작하세요.</div>
+        </div>
+      </section>
+      <section class="panel preview-panel" id="preview-panel" aria-label="문서 미리보기">
+        <div class="preview-banner"><div><strong style="font-size:14px">02. 미리보기</strong> <span style="font-size:12px;color:#7c8b99">· A4 문서</span></div><span id="validation-chip" class="status-chip">입력 전</span></div>
+        <div class="preview-wrap"><div id="paper"></div></div>
+      </section>
+    </div>
+    <p class="footer-note">※ 본 서비스는 문서 서식과 입력 검증을 제공하는 도구이며, 실제 거래·고용·법률적 효력이나 발급을 보장하지 않습니다. 출력 후 사실관계와 서명을 확인하세요. PDF 저장은 브라우저 인쇄 화면에서 <strong>'PDF로 저장'</strong>을 선택합니다.</p>
+  </main>
+</div>
+</body>
+</html>

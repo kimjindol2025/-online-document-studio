@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "resume",
+  "slug": "resume",
+  "title": "이력서 (기본형)",
+  "category": "인사·취업",
+  "status": "public",
+  "icon": "user-round",
+  "summary": "학력과 경력을 질문에 입력하면 간결한 A4 이력서가 만들어집니다.",
+  "purpose": "구직·입사 지원용 본인 작성 이력서",
+  "notice": "사용자가 직접 작성하는 이력서입니다. 불필요한 민감정보는 입력하지 마세요.",
+  "layout": "simple",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "이름",
+      "type": "text",
+      "required": true,
+      "group": "기본 정보",
+      "placeholder": "홍길동"
+    },
+    {
+      "id": "phone",
+      "label": "연락처",
+      "type": "tel",
+      "group": "기본 정보",
+      "placeholder": "010-0000-0000"
+    },
+    {
+      "id": "email",
+      "label": "이메일",
+      "type": "email",
+      "group": "기본 정보",
+      "placeholder": "example@email.com"
+    },
+    {
+      "id": "address",
+      "label": "주소 (선택)",
+      "type": "text",
+      "group": "기본 정보"
+    },
+    {
+      "id": "education",
+      "label": "학력",
+      "type": "repeater",
+      "group": "학력",
+      "columns": [
+        {
+          "id": "school",
+          "label": "학교·기관",
+          "required": true
+        },
+        {
+          "id": "major",
+          "label": "전공/과정"
+        },
+        {
+          "id": "period",
+          "label": "기간"
+        }
+      ],
+      "initialRows": 1
+    },
+    {
+      "id": "work",
+      "label": "경력",
+      "type": "repeater",
+      "group": "경력",
+      "columns": [
+        {
+          "id": "company",
+          "label": "회사·기관",
+          "required": true
+        },
+        {
+          "id": "period",
+          "label": "근무 기간"
+        },
+        {
+          "id": "duty",
+          "label": "담당 업무"
+        }
+      ],
+      "initialRows": 1
+    },
+    {
+      "id": "certifications",
+      "label": "자격·면허 (선택)",
+      "type": "textarea",
+      "group": "기타",
+      "placeholder": "관련 자격·교육 이수 내역",
+      "rows": 2
+    },
+    {
+      "id": "introduction",
+      "label": "자기소개 (선택)",
+      "type": "textarea",
+      "group": "기타",
+      "placeholder": "직접 작성해 주세요",
+      "rows": 5
+    }
+  ],
+  "seo": {
+    "title": "이력서 양식 무료 작성·PDF 인쇄 | 문서 작성 플랫폼",
+    "description": "이력서 양식을 다운로드할 필요 없이 웹에서 작성하고 PDF로 저장하세요. 회원가입 없이 무료."
+  }
+}

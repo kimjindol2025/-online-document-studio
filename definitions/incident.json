@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "incident",
+  "slug": "incident",
+  "title": "시말서 (기본형)",
+  "category": "인사·증명",
+  "status": "public",
+  "icon": "file-warning",
+  "summary": "사건의 경위와 작성자의 설명을 입력해 문서 형태로 정리합니다.",
+  "purpose": "작성자 본인이 사실관계를 설명하기 위한 문서",
+  "notice": "서비스는 사건의 사실이나 책임을 판단하지 않습니다. 본인의 사실에 근거해 작성하고, 원하지 않는 자백 표현을 자동 생성하지 않습니다.",
+  "layout": "narrative",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "작성자",
+      "type": "text",
+      "required": true,
+      "group": "작성자",
+      "placeholder": "이름"
+    },
+    {
+      "id": "department",
+      "label": "부서·소속 (선택)",
+      "type": "text",
+      "group": "작성자"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date",
+      "required": true,
+      "group": "작성자"
+    },
+    {
+      "id": "subject",
+      "label": "제목",
+      "type": "text",
+      "required": true,
+      "group": "내용",
+      "placeholder": "사건 또는 상황의 제목"
+    },
+    {
+      "id": "description",
+      "label": "경위 · 사실관계",
+      "type": "textarea",
+      "required": true,
+      "group": "내용",
+      "rows": 7,
+      "placeholder": "직접 확인한 사실을 시간 순서로 작성하세요"
+    },
+    {
+      "id": "actions",
+      "label": "조치 사항 (선택)",
+      "type": "textarea",
+      "group": "내용",
+      "rows": 4,
+      "placeholder": "해당하는 경우만 작성"
+    },
+    {
+      "id": "other",
+      "label": "추가 설명 (선택)",
+      "type": "textarea",
+      "group": "내용",
+      "rows": 3
+    }
+  ],
+  "seo": {
+    "title": "시말서 양식 무료 작성 | PDF 인쇄",
+    "description": "시말서를 모바일·PC에서 직접 작성하고 PDF로 저장하세요. 작성한 내용은 기기에서만 보관됩니다."
+  }
+}
