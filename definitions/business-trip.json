@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"business-trip","slug":"business-trip","title":"출장신청서","category":"내부","status":"public","summary":"출장신청서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"출장신청서"}}

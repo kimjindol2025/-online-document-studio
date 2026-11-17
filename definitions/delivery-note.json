@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"delivery-note","slug":"delivery-note","title":"납품서","category":"비즈니스","status":"public","summary":"납품서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"납품서"}}

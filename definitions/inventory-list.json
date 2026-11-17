@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"inventory-list","slug":"inventory-list","title":"재고관리표","category":"구매","status":"public","summary":"재고관리표를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"재고관리표"}}

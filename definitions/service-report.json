@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"service-report","slug":"service-report","title":"용역완료보고서","category":"비즈니스","status":"public","summary":"용역완료보고서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"용역완료보고서"}}
