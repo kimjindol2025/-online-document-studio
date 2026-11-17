@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "official-letter",
+  "slug": "official-letter",
+  "title": "공문",
+  "category": "내부",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "공문을 작성하고 필요한 정보를 입력한 뒤 저장하세요.",
+  "purpose": "공식 문서 발송",
+  "fields": [{"id": "documentNo", "label": "문서번호", "type": "text"}, {"id": "date", "label": "작성일자", "type": "date"}, {"id": "content", "label": "내용", "type": "textarea"}],
+  "seo": {"title": "공문 무료 작성", "description": "공문 양식"}
+}

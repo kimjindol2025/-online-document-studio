@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "payroll-statement",
+  "slug": "payroll-statement",
+  "title": "급여명세서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "급여명세서를 작성하고 필요한 정보를 입력한 뒤 저장하세요.",
+  "purpose": "급여 내역 통지",
+  "fields": [{"id": "documentNo", "label": "문서번호", "type": "text"}, {"id": "date", "label": "작성일자", "type": "date"}, {"id": "content", "label": "내용", "type": "textarea"}],
+  "seo": {"title": "급여명세서 무료 작성", "description": "급여명세서 양식"}
+}

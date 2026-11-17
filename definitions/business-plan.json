@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "business-plan",
+  "slug": "business-plan",
+  "title": "사업계획서",
+  "category": "기획",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "사업계획서를 작성하고 필요한 정보를 입력한 뒤 저장하세요.",
+  "purpose": "사업 계획 수립",
+  "fields": [{"id": "documentNo", "label": "문서번호", "type": "text"}, {"id": "date", "label": "작성일자", "type": "date"}, {"id": "content", "label": "내용", "type": "textarea"}],
+  "seo": {"title": "사업계획서 무료 작성", "description": "사업계획서 양식"}
+}
