@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "vendor-evaluation",
+  "slug": "vendor-evaluation",
+  "title": "거래처평가표",
+  "category": "구매",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "거래처평가표를 작성하세요.",
+  "purpose": "거래처 평가",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "거래처평가표",
+    "description": "거래처평가표 양식"
+  }
+}

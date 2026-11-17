@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "property-inspection",
+  "slug": "property-inspection",
+  "title": "부동산실사보고서",
+  "category": "부동산",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "부동산실사보고서를 작성하세요.",
+  "purpose": "부동산 실사",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "부동산실사보고서",
+    "description": "부동산실사보고서 양식"
+  }
+}

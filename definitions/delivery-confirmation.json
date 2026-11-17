@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "delivery-confirmation",
+  "slug": "delivery-confirmation",
+  "title": "배송확인서",
+  "category": "물류",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "배송확인서를 작성하세요.",
+  "purpose": "배송 확인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "배송확인서",
+    "description": "배송확인서 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "it-support-request",
+  "slug": "it-support-request",
+  "title": "IT지원요청서",
+  "category": "IT",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "IT지원요청서를 작성하세요.",
+  "purpose": "IT 지원 요청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "IT지원요청서",
+    "description": "IT지원요청서 양식"
+  }
+}

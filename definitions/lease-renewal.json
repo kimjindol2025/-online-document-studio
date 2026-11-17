@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lease-renewal",
+  "slug": "lease-renewal",
+  "title": "임대차갱신계약서",
+  "category": "부동산",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "임대차갱신계약서를 작성하세요.",
+  "purpose": "임대차 갱신",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "임대차갱신계약서",
+    "description": "임대차갱신계약서 양식"
+  }
+}

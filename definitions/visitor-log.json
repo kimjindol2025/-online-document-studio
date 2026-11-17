@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "visitor-log",
+  "slug": "visitor-log",
+  "title": "방문일지",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "방문일지를 작성하세요.",
+  "purpose": "방문 기록",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "방문일지",
+    "description": "방문일지 양식"
+  }
+}

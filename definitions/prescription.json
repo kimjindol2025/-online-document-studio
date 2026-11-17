@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "prescription",
+  "slug": "prescription",
+  "title": "처방전",
+  "category": "의료",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "처방전을 작성하세요.",
+  "purpose": "처방",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "처방전",
+    "description": "처방전 양식"
+  }
+}

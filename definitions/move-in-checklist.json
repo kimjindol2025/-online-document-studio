@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "move-in-checklist",
+  "slug": "move-in-checklist",
+  "title": "입주점검표",
+  "category": "부동산",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "입주점검표를 작성하세요.",
+  "purpose": "입주 점검",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "입주점검표",
+    "description": "입주점검표 양식"
+  }
+}

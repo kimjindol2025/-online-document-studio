@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "parent-consent",
+  "slug": "parent-consent",
+  "title": "학부모동의서",
+  "category": "교육",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "학부모동의서를 작성하세요.",
+  "purpose": "학부모 동의",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "학부모동의서",
+    "description": "학부모동의서 양식"
+  }
+}

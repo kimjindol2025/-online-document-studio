@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "training-certificate",
+  "slug": "training-certificate",
+  "title": "수료증",
+  "category": "교육",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "수료증을 작성하세요.",
+  "purpose": "교육 수료",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "수료증",
+    "description": "수료증 양식"
+  }
+}

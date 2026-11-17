@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "project-status",
+  "slug": "project-status",
+  "title": "프로젝트현황보고서",
+  "category": "기획",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "프로젝트현황보고서를 작성하세요.",
+  "purpose": "프로젝트 현황",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "프로젝트현황보고서",
+    "description": "프로젝트현황보고서 양식"
+  }
+}

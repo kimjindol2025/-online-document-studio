@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "medical-certificate",
+  "slug": "medical-certificate",
+  "title": "진단서",
+  "category": "의료",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "진단서를 작성하세요.",
+  "purpose": "진단",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "진단서",
+    "description": "진단서 양식"
+  }
+}

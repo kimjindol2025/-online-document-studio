@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "patient-consent",
+  "slug": "patient-consent",
+  "title": "환자동의서",
+  "category": "의료",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "환자동의서를 작성하세요.",
+  "purpose": "환자 동의",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "환자동의서",
+    "description": "환자동의서 양식"
+  }
+}

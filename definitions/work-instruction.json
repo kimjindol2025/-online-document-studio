@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "work-instruction",
+  "slug": "work-instruction",
+  "title": "작업표준서",
+  "category": "생산",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "작업표준서를 작성하세요.",
+  "purpose": "작업 표준",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "작업표준서",
+    "description": "작업표준서 양식"
+  }
+}

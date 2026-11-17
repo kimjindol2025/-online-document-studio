@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "grade-report",
+  "slug": "grade-report",
+  "title": "성적표",
+  "category": "교육",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "성적표를 작성하세요.",
+  "purpose": "성적 보고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "성적표",
+    "description": "성적표 양식"
+  }
+}

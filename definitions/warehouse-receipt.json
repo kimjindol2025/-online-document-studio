@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "warehouse-receipt",
+  "slug": "warehouse-receipt",
+  "title": "창고입고증",
+  "category": "물류",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "창고입고증을 작성하세요.",
+  "purpose": "창고 입고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "창고입고증",
+    "description": "창고입고증 양식"
+  }
+}

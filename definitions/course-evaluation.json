@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "course-evaluation",
+  "slug": "course-evaluation",
+  "title": "강의평가서",
+  "category": "교육",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "강의평가서를 작성하세요.",
+  "purpose": "강의 평가",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "강의평가서",
+    "description": "강의평가서 양식"
+  }
+}

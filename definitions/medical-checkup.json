@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "medical-checkup",
+  "slug": "medical-checkup",
+  "title": "건강검진결과서",
+  "category": "의료",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "건강검진결과서를 작성하세요.",
+  "purpose": "건강검진 결과",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "건강검진결과서",
+    "description": "건강검진결과서 양식"
+  }
+}

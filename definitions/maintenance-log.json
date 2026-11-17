@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "maintenance-log",
+  "slug": "maintenance-log",
+  "title": "설비점검일지",
+  "category": "생산",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "설비점검일지를 작성하세요.",
+  "purpose": "설비 점검",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "설비점검일지",
+    "description": "설비점검일지 양식"
+  }
+}
