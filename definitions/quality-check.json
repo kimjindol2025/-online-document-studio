@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"quality-check","slug":"quality-check","title":"검수조서","category":"구매","status":"public","summary":"검수조서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"검수조서"}}
