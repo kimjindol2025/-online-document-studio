@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"weekly-report","slug":"weekly-report","title":"주간업무보고서","category":"내부","status":"public","summary":"주간업무보고서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"주간업무보고서"}}

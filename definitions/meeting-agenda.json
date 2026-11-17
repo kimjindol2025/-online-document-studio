@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"meeting-agenda","slug":"meeting-agenda","title":"회의안건","category":"내부","status":"public","summary":"회의안건을 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"회의안건"}}

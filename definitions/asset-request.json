@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"asset-request","slug":"asset-request","title":"비품신청서","category":"내부","status":"public","summary":"비품신청서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"비품신청서"}}

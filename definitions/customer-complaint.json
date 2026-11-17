@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"customer-complaint","slug":"customer-complaint","title":"고객불만접수서","category":"영업","status":"public","summary":"고객불만접수서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"고객불만접수서"}}

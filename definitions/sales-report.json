@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"sales-report","slug":"sales-report","title":"영업일보","category":"영업","status":"public","summary":"영업일보를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"영업일보"}}

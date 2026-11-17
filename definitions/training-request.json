@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"training-request","slug":"training-request","title":"교육신청서","category":"인사","status":"public","summary":"교육신청서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"교육신청서"}}
