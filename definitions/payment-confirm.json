@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "payment-confirm",
+  "slug": "payment-confirm",
+  "title": "수납확인서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "수납 내역을 확인하세요.",
+  "purpose": "수납 확인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "수납확인서",
+    "description": "수납확인서 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-purchase-report",
+  "slug": "sales-purchase-report",
+  "title": "매입매출거래보고서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "매입·매출 거래를 보고하세요.",
+  "purpose": "거래 보고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "매입매출거래보고서",
+    "description": "매입매출거래보고서 양식"
+  }
+}

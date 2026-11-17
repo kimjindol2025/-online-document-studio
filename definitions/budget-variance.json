@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "budget-variance",
+  "slug": "budget-variance",
+  "title": "비용예산차이분석표",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "예산과 실적 차이를 분석하세요.",
+  "purpose": "예산 분석",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "비용예산차이분석표",
+    "description": "비용예산차이분석표 양식"
+  }
+}

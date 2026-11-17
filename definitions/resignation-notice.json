@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "resignation-notice",
+  "slug": "resignation-notice",
+  "title": "사직권고장",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "사직 의사를 통보하세요.",
+  "purpose": "사직 통보",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "사직권고장",
+    "description": "사직권고장 양식"
+  }
+}

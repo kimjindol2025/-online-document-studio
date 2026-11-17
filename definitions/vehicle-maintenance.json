@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "vehicle-maintenance",
+  "slug": "vehicle-maintenance",
+  "title": "법인차량정비승인서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "법인 차량 정비를 승인하세요.",
+  "purpose": "차량 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "법인차량정비승인서",
+    "description": "법인차량정비승인서 양식"
+  }
+}

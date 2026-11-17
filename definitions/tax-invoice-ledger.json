@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tax-invoice-ledger",
+  "slug": "tax-invoice-ledger",
+  "title": "세금계산서접수대장",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "세금계산서 접수 내역을 기록하세요.",
+  "purpose": "세금계산서 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "세금계산서접수대장",
+    "description": "세금계산서접수대장 양식"
+  }
+}

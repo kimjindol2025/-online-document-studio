@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "note-ledger",
+  "slug": "note-ledger",
+  "title": "받을어음원장",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "받을어음 내역을 관리하세요.",
+  "purpose": "어음 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "받을어음원장",
+    "description": "받을어음원장 양식"
+  }
+}

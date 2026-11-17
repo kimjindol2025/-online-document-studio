@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "salary-advance",
+  "slug": "salary-advance",
+  "title": "급여가불신청서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "급여 가불을 신청하세요.",
+  "purpose": "가불 신청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "급여가불신청서",
+    "description": "급여가불신청서 양식"
+  }
+}

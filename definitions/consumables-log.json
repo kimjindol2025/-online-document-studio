@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "consumables-log",
+  "slug": "consumables-log",
+  "title": "소모품사용내역서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "소모품 사용 내역을 기록하세요.",
+  "purpose": "소모품 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "소모품사용내역서",
+    "description": "소모품사용내역서 양식"
+  }
+}

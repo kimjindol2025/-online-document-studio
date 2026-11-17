@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "construction-performance",
+  "slug": "construction-performance",
+  "title": "공사실적증명서",
+  "category": "건설",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "공사 수행 실적을 증명하세요.",
+  "purpose": "실적 증명",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "공사실적증명서",
+    "description": "공사실적증명서 양식"
+  }
+}

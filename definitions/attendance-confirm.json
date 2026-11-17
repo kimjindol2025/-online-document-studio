@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "attendance-confirm",
+  "slug": "attendance-confirm",
+  "title": "근태계",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "근태 상황을 보고하세요.",
+  "purpose": "근태 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "근태계",
+    "description": "근태계 양식"
+  }
+}

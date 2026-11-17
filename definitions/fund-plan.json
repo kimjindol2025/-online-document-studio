@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "fund-plan",
+  "slug": "fund-plan",
+  "title": "자금계획표",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "자금 수입·지출 계획을 작성하세요.",
+  "purpose": "자금 계획",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "자금계획표",
+    "description": "자금계획표 양식"
+  }
+}

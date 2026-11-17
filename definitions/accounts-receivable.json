@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "accounts-receivable",
+  "slug": "accounts-receivable",
+  "title": "미수금확인서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "미수금 잔액을 확인하세요.",
+  "purpose": "미수금 확인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "미수금확인서",
+    "description": "미수금확인서 양식"
+  }
+}

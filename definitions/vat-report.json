@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "vat-report",
+  "slug": "vat-report",
+  "title": "부가가치세신고보고서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "부가가치세 신고 내용을 작성하세요.",
+  "purpose": "세무 신고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "부가가치세신고보고서",
+    "description": "부가가치세신고보고서 양식"
+  }
+}

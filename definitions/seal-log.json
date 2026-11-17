@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "seal-log",
+  "slug": "seal-log",
+  "title": "법인인감날인기록대장",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "법인인감 날인 기록을 관리하세요.",
+  "purpose": "인감 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "법인인감날인기록대장",
+    "description": "법인인감날인기록대장 양식"
+  }
+}

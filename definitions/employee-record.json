@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "employee-record",
+  "slug": "employee-record",
+  "title": "근로자고용기록부",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "근로자 고용 기록을 관리하세요.",
+  "purpose": "인사 기록",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "근로자고용기록부",
+    "description": "근로자고용기록부 양식"
+  }
+}

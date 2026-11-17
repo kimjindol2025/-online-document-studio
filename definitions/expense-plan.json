@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "expense-plan",
+  "slug": "expense-plan",
+  "title": "경비사용계획서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "경비 사용 계획을 작성하세요.",
+  "purpose": "경비 계획",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "경비사용계획서",
+    "description": "경비사용계획서 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "cash-daily",
+  "slug": "cash-daily",
+  "title": "금전출납일보",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "일일 금전 출납을 기록하세요.",
+  "purpose": "현금 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "금전출납일보",
+    "description": "금전출납일보 양식"
+  }
+}

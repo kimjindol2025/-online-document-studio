@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "purchase-ledger",
+  "slug": "purchase-ledger",
+  "title": "매입관리대장",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "매입 거래 내역을 관리하세요.",
+  "purpose": "매입 관리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "매입관리대장",
+    "description": "매입관리대장 양식"
+  }
+}
