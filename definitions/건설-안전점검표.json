@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"건설-안전점검표","slug":"건설-안전점검표","title":"안전점검표","category":"건설","status":"public","summary":"안전점검표를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"안전점검표"}}

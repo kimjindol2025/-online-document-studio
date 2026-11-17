@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"건설-작업일보","slug":"건설-작업일보","title":"작업일보","category":"건설","status":"public","summary":"작업일보를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"작업일보"}}

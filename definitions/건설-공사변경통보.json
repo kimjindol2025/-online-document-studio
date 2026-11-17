@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"건설-공사변경통보","slug":"건설-공사변경통보","title":"공사변경통보","category":"건설","status":"public","summary":"공사변경통보를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"공사변경통보"}}
