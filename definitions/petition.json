@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"petition","slug":"petition","title":"탄원서","category":"법률","status":"public","icon":"file-text","summary":"탄원서를 작성하세요.","purpose":"탄원 및 진정","fields":[{"id":"documentNo","label":"문서번호","type":"text"},{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"탄원서","description":"탄원서 양식"}}

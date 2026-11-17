@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"recommendation","slug":"recommendation","title":"추천서","category":"인사","status":"public","icon":"file-text","summary":"추천서를 작성하세요.","purpose":"인재 추천","fields":[{"id":"documentNo","label":"문서번호","type":"text"},{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"추천서","description":"추천서 양식"}}
