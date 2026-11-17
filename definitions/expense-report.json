@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "expense-report",
+  "slug": "expense-report",
+  "title": "지출결의서",
+  "category": "내부",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "지출결의서를 작성하고 필요한 정보를 입력한 뒤 저장하세요.",
+  "purpose": "지출 승인 요청",
+  "notice": "실제 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+  "layout": "business",
+  "fields": [
+    {"id": "documentNo", "label": "문서번호", "group": "문서 정보", "type": "text", "required": true},
+    {"id": "date", "label": "작성일자", "group": "문서 정보", "type": "date", "required": true},
+    {"id": "writer", "label": "작성자", "group": "작성자 정보", "type": "text", "required": true},
+    {"id": "content", "label": "내용", "group": "내용", "type": "textarea", "rows": 6}
+  ],
+  "seo": {"title": "지출결의서 무료 작성", "description": "지출결의서 양식"},
+  "closing": "위와 같이 작성합니다.",
+  "signature": "작성자: ____________________"
+}
