@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {assessDefinition,assessChanges,canFastForward,inspectBranch} from '../tools/watch-github-forms.mjs';
+import {assessDefinition,assessChanges,canFastForward,inspectBranch,checkCredentialMetadata} from '../tools/watch-github-forms.mjs';
 const minimal={schemaVersion:1,id:'sample',slug:'sample',title:'예제',summary:'예제 설명',status:'public',fields:[{id:'content',label:'내용',type:'textarea'}]};
 test('a one-field stub is a draft even though legacy schema validation succeeds',()=>{
  const a=assessDefinition(minimal);assert.deepEqual(a.schemaIssues,[]);assert.equal(a.singleContent,true);assert.equal(a.emptyAccepted,true);assert.equal(a.quality,'DRAFT');
@@ -40,4 +40,9 @@ test('fast-forward check accepts ancestry and rejects divergent Git histories',(
 });
 test('unsafe branch strings fail before running Git',()=>{
  for(const b of ['../outside','main; echo bad','-main'])assert.throws(()=>inspectBranch('/missing',b),/잘못된 브랜치/);
+});
+test('credential metadata allows mode 600 and rejects broad permissions without reading values',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'studio-auth-metadata-')),file=path.join(dir,'credential.fixture');
+ try{fs.writeFileSync(file,'synthetic fixture',{mode:0o600});assert.doesNotThrow(()=>checkCredentialMetadata(file));fs.chmodSync(file,0o644);assert.throws(()=>checkCredentialMetadata(file),/600/);assert.throws(()=>checkCredentialMetadata(path.join(dir,'missing')),/권한/);}
+ finally{fs.rmSync(dir,{recursive:true,force:true});}
 });

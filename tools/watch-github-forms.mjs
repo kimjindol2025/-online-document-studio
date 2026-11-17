@@ -1,5 +1,5 @@
 // Git/process/report integration adapter. Never executes code from the watched ref.
-import fs from 'node:fs';import path from 'node:path';
+import fs from 'node:fs';import path from 'node:path';import os from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {validateDefinition,validateAnswers,emptyAnswers} from '../prototype/engine.mjs';
@@ -40,7 +40,12 @@ export function assessChanges(entries){
   return {rows,errors,blockers,schemaValid:rows.filter(r=>!r.schemaIssues.length).length,schemaInvalid:rows.filter(r=>r.schemaIssues.length).length,singleContent:rows.filter(r=>r.singleContent).length,emptyAccepted:rows.filter(r=>r.emptyAccepted).length,
     drafts:rows.filter(r=>r.quality==='DRAFT').length,reviewCandidates:rows.filter(r=>r.quality==='FUNCTIONAL_REVIEW_NEEDED').length};
 }
+export function checkCredentialMetadata(file=path.join(os.homedir(),'.config','forgejo','credentials.env')){
+  try{const stat=fs.statSync(file);fs.accessSync(file,fs.constants.R_OK);if(!stat.isFile()||(stat.mode&0o777)!==0o600)throw Error();}
+  catch{throw Error('FG 인증 파일의 읽기 권한/600 모드를 확인해야 합니다. 내용은 읽지 않습니다.');}
+}
 function git(root,args){
+  if(['ls-remote','fetch','push'].includes(args[0])&&args.includes('fg'))checkCredentialMetadata();
   try{return execFileSync('git',args,{cwd:root,encoding:'utf8',timeout:30000,maxBuffer:4*1024*1024,env:{...process.env,GIT_TERMINAL_PROMPT:'0'},stdio:['ignore','pipe','pipe']}).trim();}
   catch(e){throw Error('Git '+args[0]+' 실패 ('+(e.status??e.code??'unknown')+')');}
 }
