@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "id": "purchase-order",
+  "slug": "purchase-order",
+  "title": "발주서",
+  "category": "비즈니스",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "발주서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+  "purpose": "발주서 작성",
+  "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+  "layout": "business",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "발주번호",
+      "group": "문서 정보",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "발주일자",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "dueDate",
+      "label": "납기요청일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "quotationNo",
+      "label": "관련견적",
+      "group": "문서 정보",
+      "type": "text"
+    },
+    {
+      "id": "buyerName",
+      "label": "상호",
+      "group": "발주처 (구매자)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "buyerContact",
+      "label": "담당자",
+      "group": "발주처 (구매자)",
+      "type": "text"
+    },
+    {
+      "id": "buyerAddress",
+      "label": "주소",
+      "group": "발주처 (구매자)",
+      "type": "text"
+    },
+    {
+      "id": "buyerPhone",
+      "label": "전화",
+      "group": "발주처 (구매자)",
+      "type": "tel"
+    },
+    {
+      "id": "supplierName",
+      "label": "상호",
+      "group": "공급처 (판매자)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "supplierContact",
+      "label": "담당자",
+      "group": "공급처 (판매자)",
+      "type": "text"
+    },
+    {
+      "id": "supplierAddress",
+      "label": "주소",
+      "group": "공급처 (판매자)",
+      "type": "text"
+    },
+    {
+      "id": "supplierPhone",
+      "label": "전화",
+      "group": "공급처 (판매자)",
+      "type": "tel"
+    },
+    {
+      "id": "items",
+      "label": "품목",
+      "group": "품목·금액",
+      "type": "repeater",
+      "required": true,
+      "columns": [
+        {
+          "id": "description",
+          "label": "품명 / 규격",
+          "required": true
+        },
+        {
+          "id": "quantity",
+          "label": "수량",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 1000000,
+          "integer": true
+        },
+        {
+          "id": "unit",
+          "label": "단위"
+        },
+        {
+          "id": "unitPrice",
+          "label": "단가 (원)",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 999999999999,
+          "integer": true
+        },
+        {
+          "id": "dueDate",
+          "label": "품목 납기",
+          "type": "date"
+        }
+      ],
+      "initialRows": 1,
+      "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+    },
+    {
+      "id": "notes",
+      "label": "납품조건 / 특이사항",
+      "group": "기타",
+      "type": "textarea",
+      "rows": 3
+    }
+  ],
+  "seo": {
+    "title": "발주서 무료 작성·다운로드",
+    "description": "발주서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "partyGroups": [
+    "발주처 (구매자)",
+    "공급처 (판매자)"
+  ],
+  "businessTheme": "green",
+  "closing": "위 내용으로 발주합니다. 납품조건을 확인해 주세요.",
+  "signature": "발주처 확인: ______________ (인) / 공급처 수락: ______________ (인)"
+}

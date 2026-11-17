@@ -4,6 +4,9 @@ import {readFileSync,readdirSync,writeFileSync} from "node:fs";
 import {fileURLToPath} from "node:url";
 import {dirname,join} from "node:path";
 import {validateDefinition,escapeHtml} from "./prototype/engine.mjs";
+import {buildBusinessCore} from './build-business-core.mjs';
+
+buildBusinessCore();
 
 const root=dirname(fileURLToPath(import.meta.url));
 const definitionsDir=join(root,"definitions");

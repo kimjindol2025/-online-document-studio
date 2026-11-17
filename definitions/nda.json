@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "nda",
+  "slug": "nda",
+  "title": "비밀유지계약서",
+  "category": "계약·법무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "비밀유지계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "비밀유지계약서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "partyAName",
+      "label": "성명",
+      "group": "갑",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "partyBName",
+      "label": "성명",
+      "group": "을",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "purpose",
+      "label": "제1조 (목적)",
+      "group": "제1조 (목적)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "본 계약은 양 당사자 간 정보 교환 시 비밀유지에 관한 사항을 정한다.",
+      "blankTemplate": "본 계약은 양 당사자 간 정보 교환 시 비밀유지에 관한 사항을 정한다."
+    },
+    {
+      "id": "information",
+      "label": "제2조 (비밀정보)",
+      "group": "제2조 (비밀정보)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "영업비밀, 기술정보, 고객정보 등 공개되지 않은 모든 정보",
+      "blankTemplate": "영업비밀, 기술정보, 고객정보 등 공개되지 않은 모든 정보"
+    },
+    {
+      "id": "obligations",
+      "label": "제3조 (의무)",
+      "group": "제3조 (의무)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "상대방의 사전 서면 동의 없이 제3자에게 공개하지 않는다.",
+      "blankTemplate": "상대방의 사전 서면 동의 없이 제3자에게 공개하지 않는다."
+    },
+    {
+      "id": "validYears",
+      "label": "계약 종료 후 유효기간 (년)",
+      "group": "제4조 (유효기간)",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "integer": true,
+      "unit": "년"
+    }
+  ],
+  "partyGroups": [
+    "갑",
+    "을"
+  ],
+  "businessTheme": "ink",
+  "closing": "본 계약을 증명하기 위해 2통을 작성하여 각 1통씩 보관한다.",
+  "signature": "갑: ____________________ (인) / 을: ____________________ (인)",
+  "sourceDocument": "legal/nda.html",
+  "seo": {
+    "title": "비밀유지계약서 무료 작성·다운로드",
+    "description": "비밀유지계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  }
+}

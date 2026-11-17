@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "lease-agreement",
+  "slug": "lease-agreement",
+  "title": "주택임대차계약서",
+  "category": "생활·계약",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "주택임대차계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "주택임대차계약서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "landlordName",
+      "label": "성명",
+      "group": "임대인",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "landlordPhone",
+      "label": "연락처",
+      "group": "임대인",
+      "type": "tel"
+    },
+    {
+      "id": "tenantName",
+      "label": "성명",
+      "group": "임차인",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "tenantPhone",
+      "label": "연락처",
+      "group": "임차인",
+      "type": "tel"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "propertyAddress",
+      "label": "소재지",
+      "group": "임대 목적물",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "deposit",
+      "label": "보증금 (원)",
+      "group": "금액·기간",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "monthlyRent",
+      "label": "월세 (원)",
+      "group": "금액·기간",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "startDate",
+      "label": "계약 시작일",
+      "group": "금액·기간",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "endDate",
+      "label": "계약 종료일",
+      "group": "금액·기간",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "terms",
+      "label": "추가 합의사항",
+      "group": "합의사항",
+      "type": "textarea",
+      "rows": 4
+    }
+  ],
+  "partyGroups": [
+    "임대인",
+    "임차인"
+  ],
+  "businessTheme": "ink",
+  "closing": "임대인과 임차인은 위 부동산에 대하여 임대차계약을 체결한다.",
+  "signature": "임대인: ______________ (인) / 임차인: ______________ (인)",
+  "sourceDocument": "personal/lease_agreement.html",
+  "seo": {
+    "title": "주택임대차계약서 무료 작성·다운로드",
+    "description": "주택임대차계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "dateRanges": [
+    {
+      "fromField": "startDate",
+      "toField": "endDate",
+      "label": "임대차기간"
+    }
+  ]
+}

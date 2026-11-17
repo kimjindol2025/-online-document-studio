@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>거래명세서</title>
+<style>
+@page { size: A4; margin: 15mm; }
+body { font-family: 'Malgun Gothic', sans-serif; font-size: 12px; max-width: 210mm; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; letter-spacing: 6px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 10px; }
+th, td { border: 1px solid #333; padding: 6px; text-align: center; }
+th { background: #333; color: #fff; }
+input { border: none; width: 90%; font-family: inherit; text-align: center; }
+.right { text-align: right; }
+</style>
+</head>
+<body>
+<h1>거 래 명 세 서</h1>
+<table>
+<tr><td>공급자</td><td colspan="3">(주)샘플기업 / 123-45-67890</td></tr>
+<tr><td>공급받는자</td><td colspan="3"><input value="고객사명"></td></tr>
+<tr><td>거래일</td><td><input type="date" value="2026-11-18"></td><td>명세서번호</td><td><input value="ST-2026-001"></td></tr>
+</table>
+<table>
+<thead>
+<tr><th>No</th><th>품목</th><th>수량</th><th>단가</th><th>공급가액</th><th>세액</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><input value="웹사이트 제작"></td><td><input value="1"></td><td class="right"><input value="5000000"></td><td class="right">5,000,000</td><td class="right">500,000</td></tr>
+<tr><td>2</td><td><input></td><td><input></td><td class="right"><input></td><td class="right"></td><td class="right"></td></tr>
+<tr><td colspan="4"><strong>합계</strong></td><td class="right"><strong>5,000,000</strong></td><td class="right"><strong>500,000</strong></td></tr>
+</tbody>
+</table>
+<p style="text-align:right; margin-top:30px;">(주)샘플기업 (인)</p>
+</body>
+</html>

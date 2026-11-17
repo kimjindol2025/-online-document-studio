@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "power-of-attorney",
+  "slug": "power-of-attorney",
+  "title": "위임장",
+  "category": "계약·법무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "위임장의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "위임장 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "principalName",
+      "label": "성명",
+      "group": "위임인",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "principalBirthDate",
+      "label": "생년월일 (선택)",
+      "group": "위임인",
+      "type": "date"
+    },
+    {
+      "id": "agentName",
+      "label": "성명",
+      "group": "수임인",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "agentBirthDate",
+      "label": "생년월일 (선택)",
+      "group": "수임인",
+      "type": "date"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "scope",
+      "label": "위임사항",
+      "group": "위임사항",
+      "type": "textarea",
+      "required": true,
+      "rows": 5
+    },
+    {
+      "id": "startDate",
+      "label": "위임 시작일",
+      "group": "위임기간",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "endDate",
+      "label": "위임 종료일",
+      "group": "위임기간",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "partyGroups": [
+    "위임인",
+    "수임인"
+  ],
+  "businessTheme": "ink",
+  "closing": "위 위임인 본인은 수임인에게 위 사항을 위임합니다.",
+  "signature": "위임인: ____________________ (서명 또는 날인)",
+  "sourceDocument": "legal/power_of_attorney.html",
+  "seo": {
+    "title": "위임장 무료 작성·다운로드",
+    "description": "위임장를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "dateRanges": [
+    {
+      "fromField": "startDate",
+      "toField": "endDate",
+      "label": "위임기간"
+    }
+  ]
+}

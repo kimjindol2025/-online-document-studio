@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "employment-certificate",
+  "slug": "employment-certificate",
+  "title": "재직증명서",
+  "category": "인사·취업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "재직증명서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "재직증명서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "성명",
+      "group": "인적 사항",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "birthDate",
+      "label": "생년월일 (선택)",
+      "group": "인적 사항",
+      "type": "date"
+    },
+    {
+      "id": "department",
+      "label": "소속",
+      "group": "재직 사항",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "position",
+      "label": "직위",
+      "group": "재직 사항",
+      "type": "text"
+    },
+    {
+      "id": "employmentPeriod",
+      "label": "재직기간",
+      "group": "재직 사항",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "purpose",
+      "label": "용도",
+      "group": "재직 사항",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "증명 주체",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "companyName",
+      "label": "회사명",
+      "group": "증명 주체",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "companyOwner",
+      "label": "대표자",
+      "group": "증명 주체",
+      "type": "text"
+    }
+  ],
+  "partyGroups": [],
+  "businessTheme": "ink",
+  "closing": "위 사람은 현재 본 회사에 재직 중임을 증명합니다.",
+  "signature": "발급 주체 확인 / 대표자: ____________________ (서명 또는 날인)",
+  "sourceDocument": "hr/employment_certificate.html",
+  "seo": {
+    "title": "재직증명서 무료 작성·다운로드",
+    "description": "재직증명서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  }
+}

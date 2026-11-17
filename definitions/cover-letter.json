@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "cover-letter",
+  "slug": "cover-letter",
+  "title": "자기소개서",
+  "category": "인사·취업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "자기소개서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "자기소개서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "작성자",
+      "group": "지원 정보",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "targetCompany",
+      "label": "지원회사",
+      "group": "지원 정보",
+      "type": "text"
+    },
+    {
+      "id": "targetRole",
+      "label": "지원직무",
+      "group": "지원 정보",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "지원 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "growth",
+      "label": "성장과정",
+      "group": "1. 성장과정",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "id": "motivation",
+      "label": "지원동기 및 포부",
+      "group": "2. 지원동기 및 포부",
+      "type": "textarea",
+      "required": true,
+      "rows": 5
+    },
+    {
+      "id": "strengths",
+      "label": "성격의 장단점",
+      "group": "3. 성격의 장단점",
+      "type": "textarea",
+      "rows": 5
+    },
+    {
+      "id": "experience",
+      "label": "경력 및 경험",
+      "group": "4. 경력 및 경험",
+      "type": "textarea",
+      "rows": 5
+    }
+  ],
+  "partyGroups": [],
+  "businessTheme": "ink",
+  "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+  "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+  "sourceDocument": "hr/cover_letter.html",
+  "seo": {
+    "title": "자기소개서 무료 작성·다운로드",
+    "description": "자기소개서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  }
+}

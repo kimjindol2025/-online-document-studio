@@ -12,9 +12,10 @@ const base=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const load=name=>JSON.parse(readFileSync(resolve(base,"definitions",name+".json"),"utf8"));
 const resume=load("resume"),incident=load("incident"),receipt=load("receipt"),minutes=load("meeting-notes");
 
-test("정의 4종 모두 스키마 유효성 통과",()=>{
+test("기존 정의와 비즈니스 4종 모두 스키마 유효성 통과",()=>{
   for(const doc of [resume,incident,receipt,minutes])assert.deepEqual(validateDefinition(doc),[]);
-  assert.equal(definitions.length,3);
+  assert.equal(definitions.length,20);
+  for(const doc of definitions)assert.deepEqual(validateDefinition(doc),[]);
   assert.equal(definitions.some(d=>d.slug==="meeting-notes"),false,"내부 테스트 문서는 공개하지 않음");
 });
 test("4번째 이질적인 문서 JSON만으로 유효성·출력",()=>{

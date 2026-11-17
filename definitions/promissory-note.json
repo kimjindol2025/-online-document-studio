@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "promissory-note",
+  "slug": "promissory-note",
+  "title": "차용증",
+  "category": "계약·법무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "차용증의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "차용증 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "creditorName",
+      "label": "성명",
+      "group": "채권자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "creditorPhone",
+      "label": "연락처",
+      "group": "채권자",
+      "type": "tel"
+    },
+    {
+      "id": "debtorName",
+      "label": "성명",
+      "group": "채무자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "debtorPhone",
+      "label": "연락처",
+      "group": "채무자",
+      "type": "tel"
+    },
+    {
+      "id": "amount",
+      "label": "차용금액 (원)",
+      "group": "차용 조건",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "차용 조건",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "repayDate",
+      "label": "변제기일",
+      "group": "차용 조건",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "interestRate",
+      "label": "연 이율 (%)",
+      "group": "차용 조건",
+      "type": "number",
+      "min": 0,
+      "unit": "%",
+      "step": "0.01"
+    },
+    {
+      "id": "interestTerms",
+      "label": "이자·상환 조건",
+      "group": "차용 조건",
+      "type": "textarea",
+      "rows": 4
+    }
+  ],
+  "partyGroups": [
+    "채권자",
+    "채무자"
+  ],
+  "businessTheme": "ink",
+  "closing": "위 금액을 차용하였으며, 변제기일에 원금과 합의한 이자를 상환할 것을 약속합니다.",
+  "signature": "채권자: ______________ (인) / 채무자: ______________ (인)",
+  "sourceDocument": "legal/promissory_note.html",
+  "seo": {
+    "title": "차용증 무료 작성·다운로드",
+    "description": "차용증를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "dateRanges": [
+    {
+      "fromField": "date",
+      "toField": "repayDate",
+      "label": "차용기간"
+    }
+  ]
+}

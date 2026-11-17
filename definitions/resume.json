@@ -20,6 +20,12 @@
       "placeholder": "홍길동"
     },
     {
+      "id": "birthDate",
+      "label": "생년월일 (선택)",
+      "group": "기본 정보",
+      "type": "date"
+    },
+    {
       "id": "phone",
       "label": "연락처",
       "type": "tel",

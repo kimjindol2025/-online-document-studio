@@ -1,5 +1,6 @@
 // Browser-only compatibility engine for a static MVP.
 // Production contract is FreeLang Front/AFJ. This adapter must be replaced or justified in SPEC.
+import { businessIssues } from './business-rules.mjs';
 export const SUPPORTED_TYPES = new Set(["text", "tel", "email", "date", "number", "textarea", "select", "repeater"]);
 export const MAX_TEXT_LENGTH = 12000;
 export function escapeHtml(value) {
@@ -26,6 +27,7 @@ export function validateDefinition(doc) {
       for (const col of field.columns || []) {
         if (!/^[a-z][a-z0-9A-Z]*$/.test(col.id ?? "") || cIds.has(col.id)) errors.push("반복 열 ID 오류");
         cIds.add(col.id);
+        if(col.type!==undefined&&!['text','number','date'].includes(col.type))errors.push('지원하지 않는 반복 열 타입');
       }
     }
     if (field.min !== undefined && typeof field.min !== "number") errors.push("최솟값 자료형 오류");
@@ -47,6 +49,17 @@ export function validISODate(s) {
   return d.getUTCFullYear() === year && d.getUTCMonth() + 1 === month && d.getUTCDate() === day;
 }
 const nonEmpty = x => String(x ?? "").trim() !== "";
+function scalarIssue(field,value){
+  const text=String(value??'').trim();
+  if(!text)return null;
+  if(field.type==='date'&&!validISODate(text))return '실제 날짜를 입력하세요.';
+  if(field.type==='number'){
+    const number=Number(text);
+    if(!/^(?:0|[1-9]\d*)(?:\.\d+)?$/.test(text)||!Number.isFinite(number)||(field.integer&&!Number.isSafeInteger(number)))return field.integer?'정수를 입력하세요.':'올바른 숫자를 입력하세요.';
+    if((field.min!==undefined&&number<field.min)||(field.max!==undefined&&number>field.max))return '허용 금액·수량 범위를 확인하세요.';
+  }
+  return null;
+}
 export function validateAnswers(doc, answers = {}) {
   const issues = [];
   for (const field of doc.fields) {
@@ -66,6 +79,8 @@ export function validateAnswers(doc, answers = {}) {
         for (const col of field.columns) {
           if (col.required && !nonEmpty(row[col.id])) issues.push({field:field.id,message:(i + 1) + "행: " + col.label + "을(를) 입력하세요."});
           if (String(row[col.id] ?? "").length > MAX_TEXT_LENGTH) issues.push({field:field.id,message:"항목이 너무 깁니다."});
+          const scalar=scalarIssue(col,row[col.id]);
+          if(scalar)issues.push({field:field.id,message:(i+1)+'행 '+col.label+': '+scalar});
         }
       });
       continue;
@@ -73,6 +88,7 @@ export function validateAnswers(doc, answers = {}) {
     const text = String(value ?? "").trim();
     if (field.required && !text) {issues.push({field:field.id,message:field.label + "을(를) 입력하세요."});continue;}
     if (!text) continue;
+    if(field.integer&&field.type==='number'&&!Number.isSafeInteger(Number(text)))issues.push({field:field.id,message:field.label+': 정수를 입력하세요.'});
     if (text.length > MAX_TEXT_LENGTH) issues.push({field:field.id,message:"입력 내용이 너무 깁니다."});
     if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)) issues.push({field:field.id,message:"이메일 주소 형식을 확인하세요."});
     if (field.type === "date" && !validISODate(text)) issues.push({field:field.id,message:"실제 날짜를 입력하세요."});
@@ -83,7 +99,7 @@ export function validateAnswers(doc, answers = {}) {
       else if ((field.min !== undefined && number < field.min) || (field.max !== undefined && number > field.max)) issues.push({field:field.id,message:"허용 금액 범위를 벗어났습니다."});
     }
   }
-  return issues;
+  return issues.concat(businessIssues(doc,answers));
 }
 export function normalizeImportedAnswers(doc, proposed) {
   if (!proposed || typeof proposed !== "object" || Array.isArray(proposed)) throw new Error("입력 데이터 형식 오류");
@@ -111,6 +127,7 @@ export function normalizeImportedAnswers(doc, proposed) {
 }
 export const KRW = new Intl.NumberFormat("ko-KR");
 export const formatWon = n => KRW.format(Number(n)) + "원";
+export const formatFieldNumber = (field,n) => KRW.format(Number(n))+(field.unit??'원');
 export function toHangulWon(n) {
   if (!Number.isSafeInteger(Number(n)) || Number(n) < 0 || Number(n) > 999999999999) return "";
   if (+n === 0) return "영원";
@@ -149,7 +166,7 @@ export function renderDocument(doc, answers, opts = {}) {
         (rows.length ? rows.map(row => "<tr>" + field.columns.map(c => "<td>"+viewText(row[c.id], blank)+"</td>").join("")+"</tr>").join("") :
           "<tr><td colspan='" + field.columns.length + "' class='muted'>기재 사항 없음</td></tr>") + "</tbody></table></section>");
     } else {
-      const display = field.type === "number" && !blank && nonEmpty(value) ? formatWon(value) : viewText(value,blank);
+      const display = field.type === "number" && !blank && nonEmpty(value) ? formatFieldNumber(field,value) : viewText(value,blank);
       parts.push("<div class='document-field'><div class='document-label'>"+escapeHtml(field.label)+"</div><div class='document-value'>"+display+"</div></div>");
     }
   }

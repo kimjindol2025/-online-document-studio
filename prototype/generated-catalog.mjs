@@ -2,6 +2,541 @@
 export const definitions = [
   {
     "schemaVersion": 1,
+    "id": "content-certified-mail",
+    "slug": "content-certified-mail",
+    "title": "내용증명",
+    "category": "계약·법무",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "내용증명의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "내용증명 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "senderName",
+        "label": "성명",
+        "group": "발신인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "senderAddress",
+        "label": "주소",
+        "group": "발신인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "recipientName",
+        "label": "성명",
+        "group": "수신인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "recipientAddress",
+        "label": "주소",
+        "group": "수신인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "subject",
+        "label": "제목",
+        "group": "내용",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "contents",
+        "label": "전달할 내용",
+        "group": "내용",
+        "type": "textarea",
+        "required": true,
+        "rows": 12
+      }
+    ],
+    "partyGroups": [
+      "발신인",
+      "수신인"
+    ],
+    "businessTheme": "ink",
+    "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+    "signature": "발신인: ____________________ (서명 또는 날인)",
+    "sourceDocument": "legal/content_certified_mail.html",
+    "seo": {
+      "title": "내용증명 무료 작성·다운로드",
+      "description": "내용증명를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "contract",
+    "slug": "contract",
+    "title": "용역계약서",
+    "category": "비즈니스",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "용역계약서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+    "purpose": "용역계약서 작성",
+    "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+    "layout": "business",
+    "fields": [
+      {
+        "id": "date",
+        "label": "계약일",
+        "group": "계약 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "clientName",
+        "label": "상호",
+        "group": "갑 (발주자 / 의뢰인)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "clientOwner",
+        "label": "대표자",
+        "group": "갑 (발주자 / 의뢰인)",
+        "type": "text"
+      },
+      {
+        "id": "clientBusinessNo",
+        "label": "사업자번호",
+        "group": "갑 (발주자 / 의뢰인)",
+        "type": "text"
+      },
+      {
+        "id": "clientAddress",
+        "label": "주소",
+        "group": "갑 (발주자 / 의뢰인)",
+        "type": "text"
+      },
+      {
+        "id": "clientPhone",
+        "label": "전화",
+        "group": "갑 (발주자 / 의뢰인)",
+        "type": "tel"
+      },
+      {
+        "id": "providerName",
+        "label": "상호",
+        "group": "을 (수급자 / 수행사)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "providerOwner",
+        "label": "대표자",
+        "group": "을 (수급자 / 수행사)",
+        "type": "text"
+      },
+      {
+        "id": "providerBusinessNo",
+        "label": "사업자번호",
+        "group": "을 (수급자 / 수행사)",
+        "type": "text"
+      },
+      {
+        "id": "providerAddress",
+        "label": "주소",
+        "group": "을 (수급자 / 수행사)",
+        "type": "text"
+      },
+      {
+        "id": "providerPhone",
+        "label": "전화",
+        "group": "을 (수급자 / 수행사)",
+        "type": "tel"
+      },
+      {
+        "id": "purpose",
+        "label": "용역명 / 목적",
+        "group": "제1조 (목적)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "scope",
+        "label": "용역의 내용",
+        "group": "제2조 (용역의 내용)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3
+      },
+      {
+        "id": "amount",
+        "label": "총 계약금액 (원, VAT 포함)",
+        "group": "제3조 (계약금액 및 지급조건)",
+        "type": "number",
+        "required": true,
+        "min": 1,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "deposit",
+        "label": "계약금 (원)",
+        "group": "제3조 (계약금액 및 지급조건)",
+        "type": "number",
+        "min": 0,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "paymentTerms",
+        "label": "지급조건",
+        "group": "제3조 (계약금액 및 지급조건)",
+        "type": "textarea",
+        "required": true,
+        "rows": 2,
+        "placeholder": "합의한 계약금·잔금 지급 시점과 조건"
+      },
+      {
+        "id": "startDate",
+        "label": "착수일",
+        "group": "제4조 (용역기간)",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "endDate",
+        "label": "완료예정일",
+        "group": "제4조 (용역기간)",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "warranty",
+        "label": "하자보수 조항",
+        "group": "제5조 (하자보수)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "을은 용역 완료 후 1년간 무상 하자보수를 제공한다. 단, 갑의 귀책사유로 인한 하자는 제외한다.",
+        "blankTemplate": "을은 용역 완료 후 1년간 무상 하자보수를 제공한다. 단, 갑의 귀책사유로 인한 하자는 제외한다."
+      },
+      {
+        "id": "confidentiality",
+        "label": "비밀유지 조항",
+        "group": "제6조 (비밀유지)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "양 당사자는 본 계약 수행 과정에서 알게 된 상대방의 영업비밀을 제3자에게 누설하지 아니한다.",
+        "blankTemplate": "양 당사자는 본 계약 수행 과정에서 알게 된 상대방의 영업비밀을 제3자에게 누설하지 아니한다."
+      },
+      {
+        "id": "termination",
+        "label": "계약 해지 조항",
+        "group": "제7조 (계약의 해지)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "일방이 본 계약을 중대하게 위반하고 상대방의 시정 요구에도 불구하고 7일 이내에 시정하지 아니하는 경우 상대방은 계약을 해지할 수 있다.",
+        "blankTemplate": "일방이 본 계약을 중대하게 위반하고 상대방의 시정 요구에도 불구하고 7일 이내에 시정하지 아니하는 경우 상대방은 계약을 해지할 수 있다."
+      }
+    ],
+    "seo": {
+      "title": "용역계약서 무료 작성·다운로드",
+      "description": "용역계약서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "partyGroups": [
+      "갑 (발주자 / 의뢰인)",
+      "을 (수급자 / 수행사)"
+    ],
+    "businessTheme": "ink",
+    "closing": "갑과 을은 위 내용으로 용역계약을 체결한다.",
+    "signature": "갑 서명 / 날인: ______________ / 을 서명 / 날인: ______________"
+  },
+  {
+    "schemaVersion": 1,
+    "id": "cover-letter",
+    "slug": "cover-letter",
+    "title": "자기소개서",
+    "category": "인사·취업",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "자기소개서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "자기소개서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "fullName",
+        "label": "작성자",
+        "group": "지원 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "targetCompany",
+        "label": "지원회사",
+        "group": "지원 정보",
+        "type": "text"
+      },
+      {
+        "id": "targetRole",
+        "label": "지원직무",
+        "group": "지원 정보",
+        "type": "text"
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "지원 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "growth",
+        "label": "성장과정",
+        "group": "1. 성장과정",
+        "type": "textarea",
+        "rows": 5
+      },
+      {
+        "id": "motivation",
+        "label": "지원동기 및 포부",
+        "group": "2. 지원동기 및 포부",
+        "type": "textarea",
+        "required": true,
+        "rows": 5
+      },
+      {
+        "id": "strengths",
+        "label": "성격의 장단점",
+        "group": "3. 성격의 장단점",
+        "type": "textarea",
+        "rows": 5
+      },
+      {
+        "id": "experience",
+        "label": "경력 및 경험",
+        "group": "4. 경력 및 경험",
+        "type": "textarea",
+        "rows": 5
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+    "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "hr/cover_letter.html",
+    "seo": {
+      "title": "자기소개서 무료 작성·다운로드",
+      "description": "자기소개서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "employment-certificate",
+    "slug": "employment-certificate",
+    "title": "재직증명서",
+    "category": "인사·취업",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "재직증명서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "재직증명서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "fullName",
+        "label": "성명",
+        "group": "인적 사항",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "birthDate",
+        "label": "생년월일 (선택)",
+        "group": "인적 사항",
+        "type": "date"
+      },
+      {
+        "id": "department",
+        "label": "소속",
+        "group": "재직 사항",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "position",
+        "label": "직위",
+        "group": "재직 사항",
+        "type": "text"
+      },
+      {
+        "id": "employmentPeriod",
+        "label": "재직기간",
+        "group": "재직 사항",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "purpose",
+        "label": "용도",
+        "group": "재직 사항",
+        "type": "text"
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "증명 주체",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "companyName",
+        "label": "회사명",
+        "group": "증명 주체",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "companyOwner",
+        "label": "대표자",
+        "group": "증명 주체",
+        "type": "text"
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "위 사람은 현재 본 회사에 재직 중임을 증명합니다.",
+    "signature": "발급 주체 확인 / 대표자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "hr/employment_certificate.html",
+    "seo": {
+      "title": "재직증명서 무료 작성·다운로드",
+      "description": "재직증명서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "employment-contract",
+    "slug": "employment-contract",
+    "title": "근로계약서",
+    "category": "인사·취업",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "근로계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "근로계약서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "employerName",
+        "label": "성명",
+        "group": "갑 (사용자)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "workerName",
+        "label": "성명",
+        "group": "을 (근로자)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "startDate",
+        "label": "근로 시작일",
+        "group": "제1조 (근로계약기간)",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "endTerms",
+        "label": "근로 종료일 또는 기간 조건",
+        "group": "제1조 (근로계약기간)",
+        "type": "text",
+        "required": true,
+        "placeholder": "종료일 또는 기간의 정함이 없음"
+      },
+      {
+        "id": "workplace",
+        "label": "근무장소",
+        "group": "제2조 (근무장소)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "duties",
+        "label": "업무 내용",
+        "group": "제3조 (업무의 내용)",
+        "type": "textarea",
+        "required": true,
+        "rows": 4
+      },
+      {
+        "id": "workingHours",
+        "label": "근로시간·휴게시간",
+        "group": "제4조 (소정근로시간)",
+        "type": "textarea",
+        "required": true,
+        "rows": 4
+      },
+      {
+        "id": "monthlyPay",
+        "label": "월급 (원)",
+        "group": "제5조 (임금)",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "payDetails",
+        "label": "기본급·수당·지급조건",
+        "group": "제5조 (임금)",
+        "type": "textarea",
+        "required": true,
+        "rows": 4
+      },
+      {
+        "id": "holidays",
+        "label": "휴일 및 휴가",
+        "group": "제6조 (휴일 및 휴가)",
+        "type": "textarea",
+        "required": true,
+        "rows": 4,
+        "default": "주휴일, 연차유급휴가 등 근로기준법에 따름",
+        "blankTemplate": "주휴일, 연차유급휴가 등 근로기준법에 따름"
+      }
+    ],
+    "partyGroups": [
+      "갑 (사용자)",
+      "을 (근로자)"
+    ],
+    "businessTheme": "ink",
+    "closing": "본 계약을 체결하고 각자 1통씩 보관한다.",
+    "signature": "갑 (사용자): ______________ (인) / 을 (근로자): ______________ (인)",
+    "sourceDocument": "hr/employment_contract.html",
+    "seo": {
+      "title": "근로계약서 무료 작성·다운로드",
+      "description": "근로계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
     "id": "incident",
     "slug": "incident",
     "title": "시말서 (기본형)",
@@ -71,6 +606,1130 @@ export const definitions = [
       "title": "시말서 양식 무료 작성 | PDF 인쇄",
       "description": "시말서를 모바일·PC에서 직접 작성하고 PDF로 저장하세요. 작성한 내용은 기기에서만 보관됩니다."
     }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "invoice",
+    "slug": "invoice",
+    "title": "청구서",
+    "category": "비즈니스",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "청구서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+    "purpose": "청구서 작성",
+    "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+    "layout": "business",
+    "fields": [
+      {
+        "id": "documentNo",
+        "label": "청구번호",
+        "group": "문서 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "청구일자",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "dueDate",
+        "label": "납기일자",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "quotationNo",
+        "label": "관련견적",
+        "group": "문서 정보",
+        "type": "text"
+      },
+      {
+        "id": "supplierName",
+        "label": "상호",
+        "group": "공급자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "supplierOwner",
+        "label": "대표자",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierBusinessNo",
+        "label": "사업자번호",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierAddress",
+        "label": "주소",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierPhone",
+        "label": "전화",
+        "group": "공급자",
+        "type": "tel"
+      },
+      {
+        "id": "customerName",
+        "label": "상호",
+        "group": "청구처",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "customerContact",
+        "label": "담당자",
+        "group": "청구처",
+        "type": "text"
+      },
+      {
+        "id": "customerBusinessNo",
+        "label": "사업자번호",
+        "group": "청구처",
+        "type": "text"
+      },
+      {
+        "id": "customerAddress",
+        "label": "주소",
+        "group": "청구처",
+        "type": "text"
+      },
+      {
+        "id": "customerPhone",
+        "label": "전화",
+        "group": "청구처",
+        "type": "tel"
+      },
+      {
+        "id": "taxRate",
+        "label": "부가세",
+        "group": "품목·금액",
+        "type": "select",
+        "required": true,
+        "options": [
+          "10%",
+          "0%"
+        ],
+        "default": "10%",
+        "hint": "품목별 원 단위 미만 버림. 0% 선택 시 세액을 더하지 않습니다."
+      },
+      {
+        "id": "items",
+        "label": "품목",
+        "group": "품목·금액",
+        "type": "repeater",
+        "required": true,
+        "columns": [
+          {
+            "id": "description",
+            "label": "품목 / 규격",
+            "required": true
+          },
+          {
+            "id": "quantity",
+            "label": "수량",
+            "type": "number",
+            "required": true,
+            "min": 1,
+            "max": 1000000,
+            "integer": true
+          },
+          {
+            "id": "unitPrice",
+            "label": "단가 (원)",
+            "type": "number",
+            "required": true,
+            "min": 0,
+            "max": 999999999999,
+            "integer": true
+          }
+        ],
+        "initialRows": 1,
+        "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+      },
+      {
+        "id": "bankName",
+        "label": "은행",
+        "group": "입금 계좌",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "bankAccount",
+        "label": "계좌번호",
+        "group": "입금 계좌",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "bankHolder",
+        "label": "예금주",
+        "group": "입금 계좌",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "notes",
+        "label": "특기사항",
+        "group": "기타",
+        "type": "textarea",
+        "rows": 3
+      }
+    ],
+    "seo": {
+      "title": "청구서 무료 작성·다운로드",
+      "description": "청구서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "partyGroups": [
+      "공급자",
+      "청구처"
+    ],
+    "businessTheme": "blue",
+    "closing": "위 금액을 청구하오니 납기일까지 입금하여 주시기 바랍니다.",
+    "signature": "공급자: ____________________ (서명 또는 날인)"
+  },
+  {
+    "schemaVersion": 1,
+    "id": "lease-agreement",
+    "slug": "lease-agreement",
+    "title": "주택임대차계약서",
+    "category": "생활·계약",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "주택임대차계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "주택임대차계약서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "landlordName",
+        "label": "성명",
+        "group": "임대인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "landlordPhone",
+        "label": "연락처",
+        "group": "임대인",
+        "type": "tel"
+      },
+      {
+        "id": "tenantName",
+        "label": "성명",
+        "group": "임차인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "tenantPhone",
+        "label": "연락처",
+        "group": "임차인",
+        "type": "tel"
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "propertyAddress",
+        "label": "소재지",
+        "group": "임대 목적물",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "deposit",
+        "label": "보증금 (원)",
+        "group": "금액·기간",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "monthlyRent",
+        "label": "월세 (원)",
+        "group": "금액·기간",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "startDate",
+        "label": "계약 시작일",
+        "group": "금액·기간",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "endDate",
+        "label": "계약 종료일",
+        "group": "금액·기간",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "terms",
+        "label": "추가 합의사항",
+        "group": "합의사항",
+        "type": "textarea",
+        "rows": 4
+      }
+    ],
+    "partyGroups": [
+      "임대인",
+      "임차인"
+    ],
+    "businessTheme": "ink",
+    "closing": "임대인과 임차인은 위 부동산에 대하여 임대차계약을 체결한다.",
+    "signature": "임대인: ______________ (인) / 임차인: ______________ (인)",
+    "sourceDocument": "personal/lease_agreement.html",
+    "seo": {
+      "title": "주택임대차계약서 무료 작성·다운로드",
+      "description": "주택임대차계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "dateRanges": [
+      {
+        "fromField": "startDate",
+        "toField": "endDate",
+        "label": "임대차기간"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "meeting-minutes",
+    "slug": "meeting-minutes",
+    "title": "회의록",
+    "category": "업무·기록",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "회의록의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "회의록 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "title",
+        "label": "회의명",
+        "group": "회의 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "회의 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "time",
+        "label": "회의 시각",
+        "group": "회의 정보",
+        "type": "text",
+        "placeholder": "예: 14:00"
+      },
+      {
+        "id": "place",
+        "label": "장소",
+        "group": "회의 정보",
+        "type": "text"
+      },
+      {
+        "id": "attendees",
+        "label": "참석자",
+        "group": "회의 정보",
+        "type": "textarea",
+        "required": true,
+        "rows": 2
+      },
+      {
+        "id": "contents",
+        "label": "회의 내용",
+        "group": "회의 내용",
+        "type": "textarea",
+        "required": true,
+        "rows": 8
+      },
+      {
+        "id": "decisions",
+        "label": "결정사항",
+        "group": "결정사항",
+        "type": "textarea",
+        "rows": 5
+      },
+      {
+        "id": "fullName",
+        "label": "작성자",
+        "group": "작성자",
+        "type": "text",
+        "required": true
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+    "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "internal/meeting_minutes.html",
+    "seo": {
+      "title": "회의록 무료 작성·다운로드",
+      "description": "회의록를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "nda",
+    "slug": "nda",
+    "title": "비밀유지계약서",
+    "category": "계약·법무",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "비밀유지계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "비밀유지계약서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "partyAName",
+        "label": "성명",
+        "group": "갑",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "partyBName",
+        "label": "성명",
+        "group": "을",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "purpose",
+        "label": "제1조 (목적)",
+        "group": "제1조 (목적)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "본 계약은 양 당사자 간 정보 교환 시 비밀유지에 관한 사항을 정한다.",
+        "blankTemplate": "본 계약은 양 당사자 간 정보 교환 시 비밀유지에 관한 사항을 정한다."
+      },
+      {
+        "id": "information",
+        "label": "제2조 (비밀정보)",
+        "group": "제2조 (비밀정보)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "영업비밀, 기술정보, 고객정보 등 공개되지 않은 모든 정보",
+        "blankTemplate": "영업비밀, 기술정보, 고객정보 등 공개되지 않은 모든 정보"
+      },
+      {
+        "id": "obligations",
+        "label": "제3조 (의무)",
+        "group": "제3조 (의무)",
+        "type": "textarea",
+        "required": true,
+        "rows": 3,
+        "default": "상대방의 사전 서면 동의 없이 제3자에게 공개하지 않는다.",
+        "blankTemplate": "상대방의 사전 서면 동의 없이 제3자에게 공개하지 않는다."
+      },
+      {
+        "id": "validYears",
+        "label": "계약 종료 후 유효기간 (년)",
+        "group": "제4조 (유효기간)",
+        "type": "number",
+        "required": true,
+        "min": 0,
+        "integer": true,
+        "unit": "년"
+      }
+    ],
+    "partyGroups": [
+      "갑",
+      "을"
+    ],
+    "businessTheme": "ink",
+    "closing": "본 계약을 증명하기 위해 2통을 작성하여 각 1통씩 보관한다.",
+    "signature": "갑: ____________________ (인) / 을: ____________________ (인)",
+    "sourceDocument": "legal/nda.html",
+    "seo": {
+      "title": "비밀유지계약서 무료 작성·다운로드",
+      "description": "비밀유지계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "pledge",
+    "slug": "pledge",
+    "title": "각서",
+    "category": "업무·기록",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "각서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "각서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "fullName",
+        "label": "작성자",
+        "group": "작성자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "contents",
+        "label": "준수·서약 사항",
+        "group": "각서 내용",
+        "type": "textarea",
+        "required": true,
+        "rows": 8
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+    "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "internal/pledge.html",
+    "seo": {
+      "title": "각서 무료 작성·다운로드",
+      "description": "각서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "power-of-attorney",
+    "slug": "power-of-attorney",
+    "title": "위임장",
+    "category": "계약·법무",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "위임장의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "위임장 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "principalName",
+        "label": "성명",
+        "group": "위임인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "principalBirthDate",
+        "label": "생년월일 (선택)",
+        "group": "위임인",
+        "type": "date"
+      },
+      {
+        "id": "agentName",
+        "label": "성명",
+        "group": "수임인",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "agentBirthDate",
+        "label": "생년월일 (선택)",
+        "group": "수임인",
+        "type": "date"
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "scope",
+        "label": "위임사항",
+        "group": "위임사항",
+        "type": "textarea",
+        "required": true,
+        "rows": 5
+      },
+      {
+        "id": "startDate",
+        "label": "위임 시작일",
+        "group": "위임기간",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "endDate",
+        "label": "위임 종료일",
+        "group": "위임기간",
+        "type": "date",
+        "required": true
+      }
+    ],
+    "partyGroups": [
+      "위임인",
+      "수임인"
+    ],
+    "businessTheme": "ink",
+    "closing": "위 위임인 본인은 수임인에게 위 사항을 위임합니다.",
+    "signature": "위임인: ____________________ (서명 또는 날인)",
+    "sourceDocument": "legal/power_of_attorney.html",
+    "seo": {
+      "title": "위임장 무료 작성·다운로드",
+      "description": "위임장를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "dateRanges": [
+      {
+        "fromField": "startDate",
+        "toField": "endDate",
+        "label": "위임기간"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "promissory-note",
+    "slug": "promissory-note",
+    "title": "차용증",
+    "category": "계약·법무",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "차용증의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "차용증 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "creditorName",
+        "label": "성명",
+        "group": "채권자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "creditorPhone",
+        "label": "연락처",
+        "group": "채권자",
+        "type": "tel"
+      },
+      {
+        "id": "debtorName",
+        "label": "성명",
+        "group": "채무자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "debtorPhone",
+        "label": "연락처",
+        "group": "채무자",
+        "type": "tel"
+      },
+      {
+        "id": "amount",
+        "label": "차용금액 (원)",
+        "group": "차용 조건",
+        "type": "number",
+        "required": true,
+        "min": 1,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "차용 조건",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "repayDate",
+        "label": "변제기일",
+        "group": "차용 조건",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "interestRate",
+        "label": "연 이율 (%)",
+        "group": "차용 조건",
+        "type": "number",
+        "min": 0,
+        "unit": "%",
+        "step": "0.01"
+      },
+      {
+        "id": "interestTerms",
+        "label": "이자·상환 조건",
+        "group": "차용 조건",
+        "type": "textarea",
+        "rows": 4
+      }
+    ],
+    "partyGroups": [
+      "채권자",
+      "채무자"
+    ],
+    "businessTheme": "ink",
+    "closing": "위 금액을 차용하였으며, 변제기일에 원금과 합의한 이자를 상환할 것을 약속합니다.",
+    "signature": "채권자: ______________ (인) / 채무자: ______________ (인)",
+    "sourceDocument": "legal/promissory_note.html",
+    "seo": {
+      "title": "차용증 무료 작성·다운로드",
+      "description": "차용증를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "dateRanges": [
+      {
+        "fromField": "date",
+        "toField": "repayDate",
+        "label": "차용기간"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
+    "id": "proposal",
+    "slug": "proposal",
+    "title": "품의서",
+    "category": "업무·기록",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "품의서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "품의서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "documentNo",
+        "label": "문서번호",
+        "group": "기본 정보",
+        "type": "text"
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "기본 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "fullName",
+        "label": "작성자",
+        "group": "기본 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "department",
+        "label": "부서",
+        "group": "기본 정보",
+        "type": "text"
+      },
+      {
+        "id": "subject",
+        "label": "제목",
+        "group": "기본 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "contents",
+        "label": "품의 내용",
+        "group": "품의 내용",
+        "type": "textarea",
+        "required": true,
+        "rows": 8
+      },
+      {
+        "id": "budget",
+        "label": "예상 금액 (원, 선택)",
+        "group": "품의 내용",
+        "type": "number",
+        "min": 0,
+        "max": 999999999999,
+        "integer": true
+      },
+      {
+        "id": "staffApproval",
+        "label": "담당",
+        "group": "결재란",
+        "type": "text"
+      },
+      {
+        "id": "teamApproval",
+        "label": "팀장",
+        "group": "결재란",
+        "type": "text"
+      },
+      {
+        "id": "officerApproval",
+        "label": "임원",
+        "group": "결재란",
+        "type": "text"
+      },
+      {
+        "id": "directorApproval",
+        "label": "대표",
+        "group": "결재란",
+        "type": "text"
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+    "signature": "결재 / 서명: 담당 ________ 팀장 ________ 임원 ________ 대표 ________",
+    "sourceDocument": "internal/proposal.html",
+    "seo": {
+      "title": "품의서 무료 작성·다운로드",
+      "description": "품의서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "purchase-order",
+    "slug": "purchase-order",
+    "title": "발주서",
+    "category": "비즈니스",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "발주서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+    "purpose": "발주서 작성",
+    "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+    "layout": "business",
+    "fields": [
+      {
+        "id": "documentNo",
+        "label": "발주번호",
+        "group": "문서 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "발주일자",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "dueDate",
+        "label": "납기요청일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "quotationNo",
+        "label": "관련견적",
+        "group": "문서 정보",
+        "type": "text"
+      },
+      {
+        "id": "buyerName",
+        "label": "상호",
+        "group": "발주처 (구매자)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "buyerContact",
+        "label": "담당자",
+        "group": "발주처 (구매자)",
+        "type": "text"
+      },
+      {
+        "id": "buyerAddress",
+        "label": "주소",
+        "group": "발주처 (구매자)",
+        "type": "text"
+      },
+      {
+        "id": "buyerPhone",
+        "label": "전화",
+        "group": "발주처 (구매자)",
+        "type": "tel"
+      },
+      {
+        "id": "supplierName",
+        "label": "상호",
+        "group": "공급처 (판매자)",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "supplierContact",
+        "label": "담당자",
+        "group": "공급처 (판매자)",
+        "type": "text"
+      },
+      {
+        "id": "supplierAddress",
+        "label": "주소",
+        "group": "공급처 (판매자)",
+        "type": "text"
+      },
+      {
+        "id": "supplierPhone",
+        "label": "전화",
+        "group": "공급처 (판매자)",
+        "type": "tel"
+      },
+      {
+        "id": "items",
+        "label": "품목",
+        "group": "품목·금액",
+        "type": "repeater",
+        "required": true,
+        "columns": [
+          {
+            "id": "description",
+            "label": "품명 / 규격",
+            "required": true
+          },
+          {
+            "id": "quantity",
+            "label": "수량",
+            "type": "number",
+            "required": true,
+            "min": 1,
+            "max": 1000000,
+            "integer": true
+          },
+          {
+            "id": "unit",
+            "label": "단위"
+          },
+          {
+            "id": "unitPrice",
+            "label": "단가 (원)",
+            "type": "number",
+            "required": true,
+            "min": 0,
+            "max": 999999999999,
+            "integer": true
+          },
+          {
+            "id": "dueDate",
+            "label": "품목 납기",
+            "type": "date"
+          }
+        ],
+        "initialRows": 1,
+        "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+      },
+      {
+        "id": "notes",
+        "label": "납품조건 / 특이사항",
+        "group": "기타",
+        "type": "textarea",
+        "rows": 3
+      }
+    ],
+    "seo": {
+      "title": "발주서 무료 작성·다운로드",
+      "description": "발주서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "partyGroups": [
+      "발주처 (구매자)",
+      "공급처 (판매자)"
+    ],
+    "businessTheme": "green",
+    "closing": "위 내용으로 발주합니다. 납품조건을 확인해 주세요.",
+    "signature": "발주처 확인: ______________ (인) / 공급처 수락: ______________ (인)"
+  },
+  {
+    "schemaVersion": 1,
+    "id": "quotation",
+    "slug": "quotation",
+    "title": "견적서",
+    "category": "비즈니스",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "견적서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+    "purpose": "견적서 작성",
+    "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+    "layout": "business",
+    "fields": [
+      {
+        "id": "documentNo",
+        "label": "견적번호",
+        "group": "문서 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "견적일자",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "validity",
+        "label": "유효기간",
+        "group": "문서 정보",
+        "type": "text",
+        "required": true,
+        "placeholder": "예: 견적일로부터 30일"
+      },
+      {
+        "id": "supplierName",
+        "label": "상호",
+        "group": "공급자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "supplierOwner",
+        "label": "대표자",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierBusinessNo",
+        "label": "사업자번호",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierAddress",
+        "label": "주소",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierPhone",
+        "label": "전화",
+        "group": "공급자",
+        "type": "tel"
+      },
+      {
+        "id": "customerName",
+        "label": "상호",
+        "group": "공급받는 자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "customerOwner",
+        "label": "대표자",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerBusinessNo",
+        "label": "사업자번호",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerAddress",
+        "label": "주소",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerPhone",
+        "label": "전화",
+        "group": "공급받는 자",
+        "type": "tel"
+      },
+      {
+        "id": "taxRate",
+        "label": "부가세",
+        "group": "품목·금액",
+        "type": "select",
+        "required": true,
+        "options": [
+          "10%",
+          "0%"
+        ],
+        "default": "10%",
+        "hint": "품목별 원 단위 미만 버림. 0% 선택 시 세액을 더하지 않습니다."
+      },
+      {
+        "id": "items",
+        "label": "품목",
+        "group": "품목·금액",
+        "type": "repeater",
+        "required": true,
+        "columns": [
+          {
+            "id": "description",
+            "label": "품목 / 규격",
+            "required": true
+          },
+          {
+            "id": "quantity",
+            "label": "수량",
+            "type": "number",
+            "required": true,
+            "min": 1,
+            "max": 1000000,
+            "integer": true
+          },
+          {
+            "id": "unitPrice",
+            "label": "단가 (원)",
+            "type": "number",
+            "required": true,
+            "min": 0,
+            "max": 999999999999,
+            "integer": true
+          }
+        ],
+        "initialRows": 1,
+        "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+      },
+      {
+        "id": "notes",
+        "label": "특기사항",
+        "group": "기타",
+        "type": "textarea",
+        "rows": 3
+      }
+    ],
+    "seo": {
+      "title": "견적서 무료 작성·다운로드",
+      "description": "견적서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "partyGroups": [
+      "공급자",
+      "공급받는 자"
+    ],
+    "businessTheme": "ink",
+    "closing": "위와 같이 견적합니다.",
+    "signature": "공급자: ____________________ (서명 또는 날인)"
   },
   {
     "schemaVersion": 1,
@@ -168,6 +1827,90 @@ export const definitions = [
   },
   {
     "schemaVersion": 1,
+    "id": "resignation",
+    "slug": "resignation",
+    "title": "사직서",
+    "category": "인사·취업",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "사직서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+    "purpose": "사직서 작성",
+    "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+    "layout": "structured",
+    "fields": [
+      {
+        "id": "fullName",
+        "label": "성명",
+        "group": "작성자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "department",
+        "label": "소속",
+        "group": "작성자",
+        "type": "text"
+      },
+      {
+        "id": "position",
+        "label": "직위",
+        "group": "작성자",
+        "type": "text"
+      },
+      {
+        "id": "companyName",
+        "label": "수신 회사 / 대표자",
+        "group": "작성자",
+        "type": "text"
+      },
+      {
+        "id": "joinDate",
+        "label": "입사일",
+        "group": "재직 정보",
+        "type": "date"
+      },
+      {
+        "id": "leaveDate",
+        "label": "퇴사예정일",
+        "group": "재직 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "작성일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "reason",
+        "label": "사직 사유",
+        "group": "사직 사유",
+        "type": "textarea",
+        "required": true,
+        "rows": 6
+      }
+    ],
+    "partyGroups": [],
+    "businessTheme": "ink",
+    "closing": "위와 같이 사직하고자 하오니 허가하여 주시기 바랍니다.",
+    "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "hr/resignation.html",
+    "seo": {
+      "title": "사직서 무료 작성·다운로드",
+      "description": "사직서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+    },
+    "dateRanges": [
+      {
+        "fromField": "joinDate",
+        "toField": "leaveDate",
+        "label": "재직기간"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
     "id": "resume",
     "slug": "resume",
     "title": "이력서 (기본형)",
@@ -186,6 +1929,12 @@ export const definitions = [
         "required": true,
         "group": "기본 정보",
         "placeholder": "홍길동"
+      },
+      {
+        "id": "birthDate",
+        "label": "생년월일 (선택)",
+        "group": "기본 정보",
+        "type": "date"
       },
       {
         "id": "phone",
@@ -272,5 +2021,162 @@ export const definitions = [
       "title": "이력서 양식 무료 작성·PDF 인쇄 | 문서 작성 플랫폼",
       "description": "이력서 양식을 다운로드할 필요 없이 웹에서 작성하고 PDF로 저장하세요. 회원가입 없이 무료."
     }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "statement",
+    "slug": "statement",
+    "title": "거래명세서",
+    "category": "비즈니스",
+    "status": "public",
+    "icon": "file-text",
+    "summary": "공급자·공급받는 자와 실제 거래 품목을 입력하고 합계를 확인하세요.",
+    "purpose": "거래 내역 기록",
+    "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+    "layout": "business",
+    "fields": [
+      {
+        "id": "documentNo",
+        "label": "명세서번호",
+        "group": "문서 정보",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "date",
+        "label": "거래일",
+        "group": "문서 정보",
+        "type": "date",
+        "required": true
+      },
+      {
+        "id": "supplierName",
+        "label": "상호",
+        "group": "공급자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "supplierOwner",
+        "label": "대표자",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierBusinessNo",
+        "label": "사업자번호",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierAddress",
+        "label": "주소",
+        "group": "공급자",
+        "type": "text"
+      },
+      {
+        "id": "supplierPhone",
+        "label": "전화",
+        "group": "공급자",
+        "type": "tel"
+      },
+      {
+        "id": "customerName",
+        "label": "상호",
+        "group": "공급받는 자",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "customerOwner",
+        "label": "대표자",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerBusinessNo",
+        "label": "사업자번호",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerAddress",
+        "label": "주소",
+        "group": "공급받는 자",
+        "type": "text"
+      },
+      {
+        "id": "customerPhone",
+        "label": "전화",
+        "group": "공급받는 자",
+        "type": "tel"
+      },
+      {
+        "id": "taxRate",
+        "label": "부가세",
+        "group": "품목·금액",
+        "type": "select",
+        "required": true,
+        "options": [
+          "10%",
+          "0%"
+        ],
+        "default": "10%",
+        "hint": "품목별 원 단위 미만 버림. 0% 선택 시 세액을 더하지 않습니다."
+      },
+      {
+        "id": "items",
+        "label": "품목",
+        "group": "품목·금액",
+        "type": "repeater",
+        "required": true,
+        "columns": [
+          {
+            "id": "description",
+            "label": "품목 / 규격",
+            "required": true
+          },
+          {
+            "id": "quantity",
+            "label": "수량",
+            "type": "number",
+            "required": true,
+            "min": 1,
+            "max": 1000000,
+            "integer": true
+          },
+          {
+            "id": "unitPrice",
+            "label": "단가 (원)",
+            "type": "number",
+            "required": true,
+            "min": 0,
+            "max": 999999999999,
+            "integer": true
+          }
+        ],
+        "initialRows": 1,
+        "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+      },
+      {
+        "id": "notes",
+        "label": "특기사항",
+        "group": "기타",
+        "type": "textarea",
+        "rows": 3
+      }
+    ],
+    "seo": {
+      "title": "거래명세서 무료 작성·다운로드",
+      "description": "거래명세서의 품목과 금액을 입력하고 저장하세요."
+    },
+    "partyGroups": [
+      "공급자",
+      "공급받는 자"
+    ],
+    "businessTheme": "ink",
+    "closing": "위와 같이 거래 내역을 확인합니다.",
+    "signature": "공급자: ____________________ (서명 또는 날인)",
+    "sourceDocument": "core/statement.html"
   }
 ];

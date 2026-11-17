@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "employment-contract",
+  "slug": "employment-contract",
+  "title": "근로계약서",
+  "category": "인사·취업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "근로계약서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "근로계약서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "employerName",
+      "label": "성명",
+      "group": "갑 (사용자)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "workerName",
+      "label": "성명",
+      "group": "을 (근로자)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "startDate",
+      "label": "근로 시작일",
+      "group": "제1조 (근로계약기간)",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "endTerms",
+      "label": "근로 종료일 또는 기간 조건",
+      "group": "제1조 (근로계약기간)",
+      "type": "text",
+      "required": true,
+      "placeholder": "종료일 또는 기간의 정함이 없음"
+    },
+    {
+      "id": "workplace",
+      "label": "근무장소",
+      "group": "제2조 (근무장소)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "duties",
+      "label": "업무 내용",
+      "group": "제3조 (업무의 내용)",
+      "type": "textarea",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "workingHours",
+      "label": "근로시간·휴게시간",
+      "group": "제4조 (소정근로시간)",
+      "type": "textarea",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "monthlyPay",
+      "label": "월급 (원)",
+      "group": "제5조 (임금)",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "payDetails",
+      "label": "기본급·수당·지급조건",
+      "group": "제5조 (임금)",
+      "type": "textarea",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "holidays",
+      "label": "휴일 및 휴가",
+      "group": "제6조 (휴일 및 휴가)",
+      "type": "textarea",
+      "required": true,
+      "rows": 4,
+      "default": "주휴일, 연차유급휴가 등 근로기준법에 따름",
+      "blankTemplate": "주휴일, 연차유급휴가 등 근로기준법에 따름"
+    }
+  ],
+  "partyGroups": [
+    "갑 (사용자)",
+    "을 (근로자)"
+  ],
+  "businessTheme": "ink",
+  "closing": "본 계약을 체결하고 각자 1통씩 보관한다.",
+  "signature": "갑 (사용자): ______________ (인) / 을 (근로자): ______________ (인)",
+  "sourceDocument": "hr/employment_contract.html",
+  "seo": {
+    "title": "근로계약서 무료 작성·다운로드",
+    "description": "근로계약서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  }
+}

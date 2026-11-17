@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>임대차계약서</title>
+<style>
+@page { size: A4; margin: 18mm; }
+body { font-family: 'Malgun Gothic', sans-serif; font-size: 12px; line-height: 1.6; max-width: 210mm; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; letter-spacing: 6px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+td { border: 1px solid #333; padding: 6px; }
+.label { background: #f5f5f5; width: 100px; }
+input { border: none; width: 100%; font-family: inherit; }
+</style>
+</head>
+<body>
+<h1>주 택 임 대 차 계 약 서</h1>
+<table>
+<tr><td class="label">임대인</td><td>성명: <input value="김임대" style="width:120px;"> &nbsp; 연락처: <input style="width:120px;"></td></tr>
+<tr><td class="label">임차인</td><td>성명: <input value="홍길동" style="width:120px;"> &nbsp; 연락처: <input style="width:120px;"></td></tr>
+<tr><td class="label">소재지</td><td><input value="서울시 강남구 테헤란로 123, 101호"></td></tr>
+<tr><td class="label">보증금</td><td>금 <input value="50,000,000" style="width:120px;"> 원</td></tr>
+<tr><td class="label">월세</td><td>금 <input value="500,000" style="width:100px;"> 원</td></tr>
+<tr><td class="label">계약기간</td><td><input value="2026.12.01 ~ 2028.11.30"></td></tr>
+</table>
+<p>임대인과 임차인은 위 부동산에 대하여 임대차계약을 체결한다.</p>
+<div style="display:flex; justify-content:space-between; margin-top:40px;">
+<div>임대인: ____________ (인)</div>
+<div>임차인: ____________ (인)</div>
+</div>
+<p style="text-align:center; margin-top:20px;">2026년 11월 18일</p>
+</body>
+</html>

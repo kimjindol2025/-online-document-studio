@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>사직서</title>
+<style>
+@page { size: A4; margin: 20mm; }
+body { font-family: 'Malgun Gothic', sans-serif; font-size: 13px; line-height: 1.8; max-width: 210mm; margin: 0 auto; padding: 30px; }
+h1 { text-align: center; letter-spacing: 10px; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+td { border: 1px solid #333; padding: 8px; }
+.label { background: #f5f5f5; width: 100px; }
+input, textarea { border: none; width: 100%; font-family: inherit; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>사 직 서</h1>
+<table>
+<tr><td class="label">소속</td><td><input value="영업팀"></td><td class="label">직위</td><td><input value="사원"></td></tr>
+<tr><td class="label">성명</td><td colspan="3"><input value="홍길동"></td></tr>
+<tr><td class="label">입사일</td><td><input type="date" value="2024-03-01"></td><td class="label">퇴사예정일</td><td><input type="date" value="2026-12-31"></td></tr>
+</table>
+<p><strong>사직 사유</strong></p>
+<textarea rows="5" style="border:1px solid #ccc; padding:8px;">개인 사정으로 인해 사직하고자 합니다.</textarea>
+<p style="margin-top:30px;">위와 같이 사직하고자 하오니 허가하여 주시기 바랍니다.</p>
+<p style="text-align:right; margin-top:40px;">2026년 11월 18일<br><br>작성자: 홍길동 (인)</p>
+<p style="text-align:right;">(주)샘플기업 대표이사 귀하</p>
+</body>
+</html>

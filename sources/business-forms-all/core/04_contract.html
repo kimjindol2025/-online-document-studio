@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>용역계약서</title>
+  <style>
+    @page { size: A4; margin: 18mm; }
+    body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; font-size: 12px; line-height: 1.6; color: #222; max-width: 210mm; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; margin-bottom: 25px; }
+    .header h1 { font-size: 22px; margin: 0; letter-spacing: 4px; border-bottom: 2px solid #333; display: inline-block; padding-bottom: 5px; }
+    .parties { display: flex; gap: 20px; margin-bottom: 20px; }
+    .party { flex: 1; border: 1px solid #333; padding: 12px; }
+    .party h3 { margin: 0 0 8px 0; font-size: 13px; background: #f5f5f5; padding: 4px 8px; }
+    .article { margin-bottom: 15px; }
+    .article h4 { margin: 0 0 5px 0; font-size: 13px; }
+    input, textarea { border: none; border-bottom: 1px solid #999; font-size: 12px; font-family: inherit; padding: 2px; }
+    input:focus, textarea:focus { outline: none; background: #fffde7; }
+    .sign-area { display: flex; justify-content: space-between; margin-top: 40px; }
+    .sign-box { width: 45%; }
+    .sign-box p { margin: 8px 0; }
+    .stamp-line { margin-top: 50px; border-top: 1px solid #333; padding-top: 5px; text-align: center; }
+    @media print { body { padding: 0; } input { border-bottom: 1px solid #999; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>용 역 계 약 서</h1>
+    <p>Service Agreement</p>
+  </div>
+
+  <div class="parties">
+    <div class="party">
+      <h3>갑 (발주자 / 의뢰인)</h3>
+      상호: <input type="text" value="고객사명" style="width:180px"><br>
+      대표자: <input type="text" style="width:120px"><br>
+      사업자번호: <input type="text" style="width:140px"><br>
+      주소: <input type="text" style="width:200px"><br>
+      전화: <input type="text" style="width:120px">
+    </div>
+    <div class="party">
+      <h3>을 (수급자 / 수행사)</h3>
+      상호: <input type="text" value="(주)샘플기업" style="width:180px"><br>
+      대표자: <input type="text" value="홍길동" style="width:120px"><br>
+      사업자번호: <input type="text" value="123-45-67890" style="width:140px"><br>
+      주소: <input type="text" value="서울시 강남구 테헤란로 123" style="width:200px"><br>
+      전화: <input type="text" value="02-1234-5678" style="width:120px">
+    </div>
+  </div>
+
+  <p style="text-align:center; margin:15px 0;">갑과 을은 다음과 같이 용역계약을 체결한다.</p>
+
+  <div class="article">
+    <h4>제1조 (목적)</h4>
+    본 계약은 갑이 을에게 위탁하는 <input type="text" value="웹사이트 제작 및 유지보수" style="width:250px"> 용역의 수행에 관한 사항을 정함을 목적으로 한다.
+  </div>
+
+  <div class="article">
+    <h4>제2조 (용역의 내용)</h4>
+    <textarea rows="3" style="width:100%; border:1px solid #ccc; padding:6px;">1. 반응형 웹사이트 기획·디자인·개발
+2. 관리자 페이지 구축
+3. 1년간 유지보수 및 기술지원</textarea>
+  </div>
+
+  <div class="article">
+    <h4>제3조 (계약금액 및 지급조건)</h4>
+    총 계약금액: 금 <input type="text" value="6,820,000" style="width:120px"> 원정 (부가가치세 포함)<br>
+    지급조건: 계약금 50% (<input type="text" value="3,410,000" style="width:100px">원) 계약 체결 시, 잔금 50% 검수 완료 후 지급
+  </div>
+
+  <div class="article">
+    <h4>제4조 (용역기간)</h4>
+    착수일: <input type="date" value="2026-11-20"> ~ 완료예정일: <input type="date" value="2026-12-31">
+  </div>
+
+  <div class="article">
+    <h4>제5조 (하자보수)</h4>
+    을은 용역 완료 후 1년간 무상 하자보수를 제공한다. 단, 갑의 귀책사유로 인한 하자는 제외한다.
+  </div>
+
+  <div class="article">
+    <h4>제6조 (비밀유지)</h4>
+    양 당사자는 본 계약 수행 과정에서 알게 된 상대방의 영업비밀을 제3자에게 누설하지 아니한다.
+  </div>
+
+  <div class="article">
+    <h4>제7조 (계약의 해지)</h4>
+    일방이 본 계약을 중대하게 위반하고 상대방의 시정 요구에도 불구하고 7일 이내에 시정하지 아니하는 경우 상대방은 계약을 해지할 수 있다.
+  </div>
+
+  <div class="sign-area">
+    <div class="sign-box">
+      <p><strong>갑 (발주자)</strong></p>
+      <p>상호: ________________________</p>
+      <p>대표자: ________________ (인)</p>
+      <div class="stamp-line">서명 / 날인</div>
+    </div>
+    <div class="sign-box">
+      <p><strong>을 (수급자)</strong></p>
+      <p>상호: (주)샘플기업</p>
+      <p>대표자: 홍길동 (인)</p>
+      <div class="stamp-line">서명 / 날인</div>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:30px;">2026년 11월 18일</p>
+</body>
+</html>

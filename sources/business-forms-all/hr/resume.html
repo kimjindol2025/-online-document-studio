@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>이력서</title>
+<style>
+@page { size: A4; margin: 15mm; }
+body { font-family: 'Malgun Gothic', sans-serif; font-size: 12px; max-width: 210mm; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; letter-spacing: 10px; margin-bottom: 5px; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+th, td { border: 1px solid #333; padding: 6px 8px; }
+th { background: #f0f0f0; width: 100px; }
+input { border: none; width: 100%; font-family: inherit; font-size: 12px; }
+.photo { width: 100px; height: 130px; border: 1px solid #999; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #666; }
+@media print { input { border: none; } }
+</style>
+</head>
+<body>
+<h1>이 력 서</h1>
+<table>
+<tr>
+<td rowspan="5" style="width:110px; text-align:center;"><div class="photo">사진</div></td>
+<th>성명</th><td><input value="홍길동"></td>
+<th>생년월일</th><td><input type="date" value="1990-01-01"></td>
+</tr>
+<tr><th>주소</th><td colspan="3"><input value="서울시 강남구"></td></tr>
+<tr><th>연락처</th><td><input value="010-1234-5678"></td><th>이메일</th><td><input value="hong@example.com"></td></tr>
+<tr><th>학력</th><td colspan="3"><input value="○○대학교 경영학과 졸업"></td></tr>
+<tr><th>경력</th><td colspan="3"><input value="(주)샘플기업 영업팀 3년"></td></tr>
+</table>
+<p><strong>학력사항</strong></p>
+<textarea rows="3" style="width:100%; border:1px solid #ccc;">2020.03 ~ 2024.02  ○○대학교 경영학과 졸업</textarea>
+<p><strong>경력사항</strong></p>
+<textarea rows="4" style="width:100%; border:1px solid #ccc;">2024.03 ~ 현재  (주)샘플기업 영업팀 사원</textarea>
+<p><strong>자격 및 기타</strong></p>
+<textarea rows="2" style="width:100%; border:1px solid #ccc;">운전면허 1종보통</textarea>
+<p style="text-align:right; margin-top:30px;">위 기재사항은 사실과 다름없음을 확인합니다.<br>2026년 11월 18일<br>작성자: 홍길동 (인)</p>
+</body>
+</html>

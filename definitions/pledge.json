@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pledge",
+  "slug": "pledge",
+  "title": "각서",
+  "category": "업무·기록",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "각서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "각서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "작성자",
+      "group": "작성자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "contents",
+      "label": "준수·서약 사항",
+      "group": "각서 내용",
+      "type": "textarea",
+      "required": true,
+      "rows": 8
+    }
+  ],
+  "partyGroups": [],
+  "businessTheme": "ink",
+  "closing": "작성 내용을 확인한 후 서명 또는 날인하세요.",
+  "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+  "sourceDocument": "internal/pledge.html",
+  "seo": {
+    "title": "각서 무료 작성·다운로드",
+    "description": "각서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  }
+}

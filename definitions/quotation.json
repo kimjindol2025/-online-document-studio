@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "id": "quotation",
+  "slug": "quotation",
+  "title": "견적서",
+  "category": "비즈니스",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "견적서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+  "purpose": "견적서 작성",
+  "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+  "layout": "business",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "견적번호",
+      "group": "문서 정보",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "견적일자",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "validity",
+      "label": "유효기간",
+      "group": "문서 정보",
+      "type": "text",
+      "required": true,
+      "placeholder": "예: 견적일로부터 30일"
+    },
+    {
+      "id": "supplierName",
+      "label": "상호",
+      "group": "공급자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "supplierOwner",
+      "label": "대표자",
+      "group": "공급자",
+      "type": "text"
+    },
+    {
+      "id": "supplierBusinessNo",
+      "label": "사업자번호",
+      "group": "공급자",
+      "type": "text"
+    },
+    {
+      "id": "supplierAddress",
+      "label": "주소",
+      "group": "공급자",
+      "type": "text"
+    },
+    {
+      "id": "supplierPhone",
+      "label": "전화",
+      "group": "공급자",
+      "type": "tel"
+    },
+    {
+      "id": "customerName",
+      "label": "상호",
+      "group": "공급받는 자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "customerOwner",
+      "label": "대표자",
+      "group": "공급받는 자",
+      "type": "text"
+    },
+    {
+      "id": "customerBusinessNo",
+      "label": "사업자번호",
+      "group": "공급받는 자",
+      "type": "text"
+    },
+    {
+      "id": "customerAddress",
+      "label": "주소",
+      "group": "공급받는 자",
+      "type": "text"
+    },
+    {
+      "id": "customerPhone",
+      "label": "전화",
+      "group": "공급받는 자",
+      "type": "tel"
+    },
+    {
+      "id": "taxRate",
+      "label": "부가세",
+      "group": "품목·금액",
+      "type": "select",
+      "required": true,
+      "options": [
+        "10%",
+        "0%"
+      ],
+      "default": "10%",
+      "hint": "품목별 원 단위 미만 버림. 0% 선택 시 세액을 더하지 않습니다."
+    },
+    {
+      "id": "items",
+      "label": "품목",
+      "group": "품목·금액",
+      "type": "repeater",
+      "required": true,
+      "columns": [
+        {
+          "id": "description",
+          "label": "품목 / 규격",
+          "required": true
+        },
+        {
+          "id": "quantity",
+          "label": "수량",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 1000000,
+          "integer": true
+        },
+        {
+          "id": "unitPrice",
+          "label": "단가 (원)",
+          "type": "number",
+          "required": true,
+          "min": 0,
+          "max": 999999999999,
+          "integer": true
+        }
+      ],
+      "initialRows": 1,
+      "hint": "수량 × 단가와 합계를 자동 계산합니다. 수량·단가는 정수로 입력하세요."
+    },
+    {
+      "id": "notes",
+      "label": "특기사항",
+      "group": "기타",
+      "type": "textarea",
+      "rows": 3
+    }
+  ],
+  "seo": {
+    "title": "견적서 무료 작성·다운로드",
+    "description": "견적서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "partyGroups": [
+    "공급자",
+    "공급받는 자"
+  ],
+  "businessTheme": "ink",
+  "closing": "위와 같이 견적합니다.",
+  "signature": "공급자: ____________________ (서명 또는 날인)"
+}

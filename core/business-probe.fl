@@ -1,0 +1,18 @@
+;; FreeLang v11/FX scalar rules. Browser output is generated from this file.
+;; Won amounts and quantities are bounded integers in the input adapter.
+(defn lineSupply [quantity unitPrice] (* quantity unitPrice))
+(defn lineTax [supply rate] (floor (/ (* supply rate) 100)))
+(defn addAmount [left right] (+ left right))
+(defn depositWithinAmount [amount deposit] (<= deposit amount))
+(defn orderedPeriod [start end] (<= start end))
+
+(println (lineSupply 1 5000000))
+(println (lineSupply 2 5000000))
+(println (lineTax 6200000 10))
+(println (lineTax 19 10))
+(println (lineTax 19 0))
+(println (addAmount 6200000 620000))
+(println (depositWithinAmount 100 50))
+(println (depositWithinAmount 100 101))
+(println (orderedPeriod 20261118 20261218))
+(println (orderedPeriod 20261218 20261118))

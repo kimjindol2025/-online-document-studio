@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>위임장</title>
+<style>
+@page { size: A4; margin: 20mm; }
+body { font-family: 'Malgun Gothic', sans-serif; font-size: 13px; line-height: 1.8; max-width: 210mm; margin: 0 auto; padding: 30px; }
+h1 { text-align: center; letter-spacing: 10px; }
+table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+td { border: 1px solid #333; padding: 8px; }
+.label { background: #f5f5f5; width: 110px; }
+input, textarea { border: none; width: 100%; font-family: inherit; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>위 임 장</h1>
+<table>
+<tr><td class="label">위임인</td><td>성명: <input value="홍길동" style="width:150px;"> &nbsp; 생년월일: <input type="date" value="1990-01-01"></td></tr>
+<tr><td class="label">수임인</td><td>성명: <input style="width:150px;"> &nbsp; 생년월일: <input type="date"></td></tr>
+<tr><td class="label">위임사항</td><td><textarea rows="4" style="border:1px solid #ccc;">부동산 매매계약 체결 및 관련 서류 제출</textarea></td></tr>
+<tr><td class="label">위임기간</td><td><input value="2026년 11월 18일 ~ 2026년 12월 31일"></td></tr>
+</table>
+<p>위 위임인 본인은 수임인에게 위 사항을 위임합니다.</p>
+<p style="text-align:right; margin-top:40px;">2026년 11월 18일<br><br>위임인: 홍길동 (인)</p>
+</body>
+</html>

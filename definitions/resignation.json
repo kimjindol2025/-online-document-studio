@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "resignation",
+  "slug": "resignation",
+  "title": "사직서",
+  "category": "인사·취업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "사직서의 필요한 내용을 직접 입력하고 미리보기·저장·출력하세요.",
+  "purpose": "사직서 작성",
+  "notice": "입력한 사실과 당사자 정보를 확인하고 필요한 내용을 직접 작성하세요.",
+  "layout": "structured",
+  "fields": [
+    {
+      "id": "fullName",
+      "label": "성명",
+      "group": "작성자",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "department",
+      "label": "소속",
+      "group": "작성자",
+      "type": "text"
+    },
+    {
+      "id": "position",
+      "label": "직위",
+      "group": "작성자",
+      "type": "text"
+    },
+    {
+      "id": "companyName",
+      "label": "수신 회사 / 대표자",
+      "group": "작성자",
+      "type": "text"
+    },
+    {
+      "id": "joinDate",
+      "label": "입사일",
+      "group": "재직 정보",
+      "type": "date"
+    },
+    {
+      "id": "leaveDate",
+      "label": "퇴사예정일",
+      "group": "재직 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "date",
+      "label": "작성일",
+      "group": "문서 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "reason",
+      "label": "사직 사유",
+      "group": "사직 사유",
+      "type": "textarea",
+      "required": true,
+      "rows": 6
+    }
+  ],
+  "partyGroups": [],
+  "businessTheme": "ink",
+  "closing": "위와 같이 사직하고자 하오니 허가하여 주시기 바랍니다.",
+  "signature": "작성자 / 확인자: ____________________ (서명 또는 날인)",
+  "sourceDocument": "hr/resignation.html",
+  "seo": {
+    "title": "사직서 무료 작성·다운로드",
+    "description": "사직서를 작성하고 빈 양식·작성본 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "dateRanges": [
+    {
+      "fromField": "joinDate",
+      "toField": "leaveDate",
+      "label": "재직기간"
+    }
+  ]
+}

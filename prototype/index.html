@@ -19,6 +19,8 @@
     <div class="eyebrow">DOCUMENT STUDIO</div>
     <h2 class="nav-title">어떤 문서가 필요하세요?</h2>
     <label class="search-wrap">⌕ <input id="doc-search" type="search" placeholder="문서 이름 검색" aria-label="문서 검색"></label>
+    <select id="doc-category" class="doc-category" aria-label="문서 분류"><option value="">전체 분류</option></select>
+    <p id="doc-count" class="doc-count" aria-live="polite"></p>
     <nav id="doc-list" class="doc-list" aria-label="문서 선택"></nav>
     <div class="trust-card"><strong>🔒 문서 내용은 내 기기에</strong>별도 서버 업로드 기능은 구현하지 않았습니다. 보안 네트워크 검증 전의 시제품입니다. 임시 보관은 이 브라우저에만 남으므로 공용 PC에서는 사용 후 삭제하고, 중요한 문서는 백업 파일을 따로 보관하세요.</div>
   </aside>
@@ -35,6 +37,10 @@
             <button type="button" class="btn outline" id="blank-button">▤ 빈 양식 출력</button>
           </div>
           <div class="aux-actions">
+            <button type="button" class="btn outline" id="download-button">↓ 작성본 다운로드</button>
+            <button type="button" class="btn outline" id="blank-download-button">↓ 빈 양식 다운로드</button>
+          </div>
+          <div class="aux-actions">
             <button type="button" class="btn ghost" id="backup-button">↓ 편집본 백업</button>
             <button type="button" class="btn ghost" id="import-button">↑ 백업 불러오기</button>
             <button type="button" class="btn ghost" id="clear-button">↻ 초기화</button>
@@ -44,12 +50,32 @@
         </div>
       </section>
       <section class="panel preview-panel" id="preview-panel" aria-label="문서 미리보기">
-        <div class="preview-banner"><div><strong style="font-size:14px">02. 미리보기</strong> <span style="font-size:12px;color:#7c8b99">· A4 문서</span></div><span id="validation-chip" class="status-chip">입력 전</span></div>
+        <div class="preview-banner"><div><strong style="font-size:14px">02. 미리보기</strong> <span style="font-size:12px;color:#7c8b99">· A4 문서</span></div><div class="preview-actions"><span id="validation-chip" class="status-chip">입력 전</span><button type="button" id="preview-template-toggle" class="preview-form-button" aria-expanded="false" aria-controls="preview-template-picker" hidden>폼 변경</button></div></div>
+        <div id="preview-template-picker" class="preview-template-picker" role="group" aria-label="미리보기 이력서 폼 선택" hidden></div>
         <div class="preview-wrap"><div id="paper"></div></div>
       </section>
     </div>
     <p class="footer-note">※ 본 서비스는 문서 서식과 입력 검증을 제공하는 도구이며, 실제 거래·고용·법률적 효력이나 발급을 보장하지 않습니다. 출력 후 사실관계와 서명을 확인하세요. PDF 저장은 브라우저 인쇄 화면에서 <strong>'PDF로 저장'</strong>을 선택합니다.</p>
   </main>
 </div>
+<dialog id="download-dialog" aria-labelledby="download-title" aria-describedby="download-description">
+  <h2 id="download-title">다운로드</h2>
+  <p id="download-description"></p>
+  <div class="download-options">
+    <button type="button" data-download-format="docx"><strong>Word <span>DOCX</span></strong><small>문서와 표를 편집할 수 있어요</small></button>
+    <button type="button" data-download-format="hwpx"><strong>한글 <span>HWPX</span></strong><small>한글의 기본 제공 형식</small></button>
+    <button type="button" data-download-format="xlsx"><strong>Excel <span>XLSX</span></strong><small>셀과 표를 편집할 수 있어요</small></button>
+    <button type="button" data-download-format="pdf"><strong>PDF <span>인쇄 · 저장</span></strong><small>브라우저 인쇄 화면에서 저장</small></button>
+  </div>
+  <p class="download-note">Word·한글·Excel은 수정하기 편한 표 양식으로 저장됩니다. 미리보기와 같은 배치는 PDF를 선택하세요. HWPX를 지원하는 한글 프로그램에서 열어주세요.</p>
+  <p id="download-feedback" role="status" aria-live="polite"></p>
+  <div class="crop-dialog-actions"><button type="button" class="btn outline" id="download-close">닫기</button></div>
+</dialog>
+<dialog id="photo-dialog" aria-labelledby="photo-dialog-title">
+  <div class="crop-dialog-head"><h2 id="photo-dialog-title">사진 위치 조절</h2><p>얼굴이 가운데 오도록 크기와 위치를 맞춰주세요.</p></div>
+  <div class="photo-crop"><img alt="사진 자르기 미리보기"></div>
+  <div class="crop-sliders"><label>확대 <output>1.0배</output><input name="zoom" type="range" min="1" max="3" step="0.05" value="1" aria-label="사진 확대"></label><label>좌우 위치<input name="x" type="range" min="0" max="100" value="50" aria-label="사진 좌우 위치"></label><label>상하 위치<input name="y" type="range" min="0" max="100" value="50" aria-label="사진 상하 위치"></label></div>
+  <div class="crop-dialog-actions"><button type="button" class="btn outline" data-crop-cancel>취소</button><button type="button" class="btn primary" data-crop-apply>사진 적용</button></div>
+</dialog>
 </body>
 </html>

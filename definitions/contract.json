@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "id": "contract",
+  "slug": "contract",
+  "title": "용역계약서",
+  "category": "비즈니스",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "용역계약서를 입력하고 품목·당사자 정보를 확인한 뒤 저장하세요.",
+  "purpose": "용역계약서 작성",
+  "notice": "실제 거래 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+  "layout": "business",
+  "fields": [
+    {
+      "id": "date",
+      "label": "계약일",
+      "group": "계약 정보",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "clientName",
+      "label": "상호",
+      "group": "갑 (발주자 / 의뢰인)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "clientOwner",
+      "label": "대표자",
+      "group": "갑 (발주자 / 의뢰인)",
+      "type": "text"
+    },
+    {
+      "id": "clientBusinessNo",
+      "label": "사업자번호",
+      "group": "갑 (발주자 / 의뢰인)",
+      "type": "text"
+    },
+    {
+      "id": "clientAddress",
+      "label": "주소",
+      "group": "갑 (발주자 / 의뢰인)",
+      "type": "text"
+    },
+    {
+      "id": "clientPhone",
+      "label": "전화",
+      "group": "갑 (발주자 / 의뢰인)",
+      "type": "tel"
+    },
+    {
+      "id": "providerName",
+      "label": "상호",
+      "group": "을 (수급자 / 수행사)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "providerOwner",
+      "label": "대표자",
+      "group": "을 (수급자 / 수행사)",
+      "type": "text"
+    },
+    {
+      "id": "providerBusinessNo",
+      "label": "사업자번호",
+      "group": "을 (수급자 / 수행사)",
+      "type": "text"
+    },
+    {
+      "id": "providerAddress",
+      "label": "주소",
+      "group": "을 (수급자 / 수행사)",
+      "type": "text"
+    },
+    {
+      "id": "providerPhone",
+      "label": "전화",
+      "group": "을 (수급자 / 수행사)",
+      "type": "tel"
+    },
+    {
+      "id": "purpose",
+      "label": "용역명 / 목적",
+      "group": "제1조 (목적)",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "scope",
+      "label": "용역의 내용",
+      "group": "제2조 (용역의 내용)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3
+    },
+    {
+      "id": "amount",
+      "label": "총 계약금액 (원, VAT 포함)",
+      "group": "제3조 (계약금액 및 지급조건)",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "deposit",
+      "label": "계약금 (원)",
+      "group": "제3조 (계약금액 및 지급조건)",
+      "type": "number",
+      "min": 0,
+      "max": 999999999999,
+      "integer": true
+    },
+    {
+      "id": "paymentTerms",
+      "label": "지급조건",
+      "group": "제3조 (계약금액 및 지급조건)",
+      "type": "textarea",
+      "required": true,
+      "rows": 2,
+      "placeholder": "합의한 계약금·잔금 지급 시점과 조건"
+    },
+    {
+      "id": "startDate",
+      "label": "착수일",
+      "group": "제4조 (용역기간)",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "endDate",
+      "label": "완료예정일",
+      "group": "제4조 (용역기간)",
+      "type": "date",
+      "required": true
+    },
+    {
+      "id": "warranty",
+      "label": "하자보수 조항",
+      "group": "제5조 (하자보수)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "을은 용역 완료 후 1년간 무상 하자보수를 제공한다. 단, 갑의 귀책사유로 인한 하자는 제외한다.",
+      "blankTemplate": "을은 용역 완료 후 1년간 무상 하자보수를 제공한다. 단, 갑의 귀책사유로 인한 하자는 제외한다."
+    },
+    {
+      "id": "confidentiality",
+      "label": "비밀유지 조항",
+      "group": "제6조 (비밀유지)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "양 당사자는 본 계약 수행 과정에서 알게 된 상대방의 영업비밀을 제3자에게 누설하지 아니한다.",
+      "blankTemplate": "양 당사자는 본 계약 수행 과정에서 알게 된 상대방의 영업비밀을 제3자에게 누설하지 아니한다."
+    },
+    {
+      "id": "termination",
+      "label": "계약 해지 조항",
+      "group": "제7조 (계약의 해지)",
+      "type": "textarea",
+      "required": true,
+      "rows": 3,
+      "default": "일방이 본 계약을 중대하게 위반하고 상대방의 시정 요구에도 불구하고 7일 이내에 시정하지 아니하는 경우 상대방은 계약을 해지할 수 있다.",
+      "blankTemplate": "일방이 본 계약을 중대하게 위반하고 상대방의 시정 요구에도 불구하고 7일 이내에 시정하지 아니하는 경우 상대방은 계약을 해지할 수 있다."
+    }
+  ],
+  "seo": {
+    "title": "용역계약서 무료 작성·다운로드",
+    "description": "용역계약서 빈 양식 및 작성본을 Word·한글·Excel·PDF로 저장하세요."
+  },
+  "partyGroups": [
+    "갑 (발주자 / 의뢰인)",
+    "을 (수급자 / 수행사)"
+  ],
+  "businessTheme": "ink",
+  "closing": "갑과 을은 위 내용으로 용역계약을 체결한다.",
+  "signature": "갑 서명 / 날인: ______________ / 을 서명 / 날인: ______________"
+}

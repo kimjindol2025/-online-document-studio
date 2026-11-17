@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>견적서</title>
+  <style>
+    @page { size: A4; margin: 15mm; }
+    body { font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; font-size: 12px; color: #222; max-width: 210mm; margin: 0 auto; padding: 20px; }
+    .header { text-align: center; margin-bottom: 20px; }
+    .header h1 { font-size: 24px; margin: 0; letter-spacing: 8px; }
+    .info-table, .items-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+    .info-table td, .items-table th, .items-table td { border: 1px solid #333; padding: 6px 8px; }
+    .info-table .label { background: #f5f5f5; width: 100px; font-weight: bold; }
+    .items-table th { background: #333; color: #fff; text-align: center; }
+    .items-table td { text-align: center; }
+    .items-table td.left { text-align: left; }
+    .items-table td.right { text-align: right; }
+    .total-row { font-weight: bold; background: #f9f9f9; }
+    .footer { margin-top: 30px; text-align: right; }
+    .stamp { display: inline-block; border: 2px solid #c00; color: #c00; padding: 8px 16px; font-weight: bold; margin-left: 20px; }
+    input, textarea { border: none; border-bottom: 1px dotted #aaa; width: 100%; font-size: 12px; font-family: inherit; }
+    input:focus, textarea:focus { outline: none; background: #fffde7; }
+    @media print {
+      body { padding: 0; }
+      input, textarea { border: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>견 적 서</h1>
+    <p>Quotation</p>
+  </div>
+
+  <table class="info-table">
+    <tr>
+      <td class="label">견적번호</td>
+      <td><input type="text" value="QT-2026-001"></td>
+      <td class="label">견적일자</td>
+      <td><input type="date" value="2026-11-18"></td>
+    </tr>
+    <tr>
+      <td class="label">유효기간</td>
+      <td colspan="3"><input type="text" value="견적일로부터 30일"></td>
+    </tr>
+  </table>
+
+  <table class="info-table">
+    <tr>
+      <td class="label" style="width:50%">공급자 (공급하는 자)</td>
+      <td class="label">공급받는 자</td>
+    </tr>
+    <tr>
+      <td>
+        상호: <input type="text" value="(주)샘플기업"><br>
+        대표자: <input type="text" value="홍길동"><br>
+        사업자번호: <input type="text" value="123-45-67890"><br>
+        주소: <input type="text" value="서울시 강남구 테헤란로 123"><br>
+        전화: <input type="text" value="02-1234-5678">
+      </td>
+      <td>
+        상호: <input type="text" value="고객사명"><br>
+        대표자: <input type="text"><br>
+        사업자번호: <input type="text"><br>
+        주소: <input type="text"><br>
+        전화: <input type="text">
+      </td>
+    </tr>
+  </table>
+
+  <table class="items-table">
+    <thead>
+      <tr>
+        <th style="width:40px">No</th>
+        <th>품목 / 규격</th>
+        <th style="width:60px">수량</th>
+        <th style="width:80px">단가</th>
+        <th style="width:100px">공급가액</th>
+        <th style="width:80px">세액</th>
+        <th style="width:100px">합계</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td class="left"><input type="text" value="웹사이트 제작"></td>
+        <td><input type="number" value="1" style="width:50px"></td>
+        <td class="right"><input type="number" value="5000000" style="width:70px; text-align:right"></td>
+        <td class="right">5,000,000</td>
+        <td class="right">500,000</td>
+        <td class="right">5,500,000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="left"><input type="text" value="유지보수 (연간)"></td>
+        <td><input type="number" value="1" style="width:50px"></td>
+        <td class="right"><input type="number" value="1200000" style="width:70px; text-align:right"></td>
+        <td class="right">1,200,000</td>
+        <td class="right">120,000</td>
+        <td class="right">1,320,000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="left"><input type="text"></td>
+        <td><input type="number" style="width:50px"></td>
+        <td class="right"><input type="number" style="width:70px; text-align:right"></td>
+        <td class="right"></td>
+        <td class="right"></td>
+        <td class="right"></td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="4">합 계</td>
+        <td class="right">6,200,000</td>
+        <td class="right">620,000</td>
+        <td class="right">6,820,000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>특기사항</strong></p>
+  <textarea rows="3" style="width:100%; border:1px solid #ccc; padding:8px;">위 견적 금액은 VAT 포함 금액입니다. 계약금 50%, 완료 시 50% 지급 조건입니다.</textarea>
+
+  <div class="footer">
+    <p>위와 같이 견적합니다.</p>
+    <p>2026년 11월 18일</p>
+    <p>공급자: (주)샘플기업 <span class="stamp">인</span></p>
+  </div>
+</body>
+</html>
