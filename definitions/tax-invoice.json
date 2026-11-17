@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "tax-invoice",
+  "slug": "tax-invoice",
+  "title": "세금계산서",
+  "category": "비즈니스",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "세금계산서를 작성하고 필요한 정보를 입력한 뒤 저장하세요.",
+  "purpose": "세금계산서 작성 및 발행",
+  "notice": "실제 내용과 금액을 확인한 뒤 서명 또는 날인하세요.",
+  "layout": "business",
+  "fields": [
+    {"id": "documentNo", "label": "문서번호", "group": "문서 정보", "type": "text", "required": true},
+    {"id": "date", "label": "작성일자", "group": "문서 정보", "type": "date", "required": true},
+    {"id": "writer", "label": "작성자", "group": "작성자 정보", "type": "text", "required": true},
+    {"id": "content", "label": "내용", "group": "내용", "type": "textarea", "rows": 6}
+  ],
+  "seo": {"title": "세금계산서 무료 작성", "description": "세금계산서 양식"},
+  "closing": "위와 같이 작성합니다.",
+  "signature": "작성자: ____________________"
+}
