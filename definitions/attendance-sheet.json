@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"attendance-sheet","slug":"attendance-sheet","title":"출석부","category":"교육","status":"public","summary":"출석부를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"출석부"}}

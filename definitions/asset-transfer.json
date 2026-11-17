@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"asset-transfer","slug":"asset-transfer","title":"자산이전신청서","category":"재무","status":"public","summary":"자산이전신청서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"자산이전신청서"}}

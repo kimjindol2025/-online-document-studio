@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"budget-request","slug":"budget-request","title":"예산신청서","category":"재무","status":"public","summary":"예산신청서를 작성하세요.","fields":[{"id":"content","label":"내용","type":"textarea"}],"seo":{"title":"예산신청서"}}
