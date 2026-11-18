@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "power-of-attorney-limited",
+  "slug": "power-of-attorney-limited",
+  "title": "제한위임장",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "제한위임장을 작성하세요.",
+  "purpose": "제한 위임",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "제한위임장",
+    "description": "제한위임장 양식"
+  }
+}

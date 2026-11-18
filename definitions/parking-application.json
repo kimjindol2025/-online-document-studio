@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "parking-application",
+  "slug": "parking-application",
+  "title": "주차신청서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "주차신청서를 작성하세요.",
+  "purpose": "주차 신청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "주차신청서",
+    "description": "주차신청서 양식"
+  }
+}

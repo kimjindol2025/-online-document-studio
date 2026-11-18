@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "budget-approval",
+  "slug": "budget-approval",
+  "title": "예산승인서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "예산승인서를 작성하세요.",
+  "purpose": "예산 승인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "예산승인서",
+    "description": "예산승인서 양식"
+  }
+}

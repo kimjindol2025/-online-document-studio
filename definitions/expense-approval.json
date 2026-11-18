@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "expense-approval",
+  "slug": "expense-approval",
+  "title": "비용승인서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "비용승인서를 작성하세요.",
+  "purpose": "비용 승인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "비용승인서",
+    "description": "비용승인서 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "credit-note",
+  "slug": "credit-note",
+  "title": "대변메모",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "대변메모를 작성하세요.",
+  "purpose": "대변 메모",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "대변메모",
+    "description": "대변메모 양식"
+  }
+}

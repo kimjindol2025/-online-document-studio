@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "contract-renewal",
+  "slug": "contract-renewal",
+  "title": "계약갱신서",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "계약갱신서를 작성하세요.",
+  "purpose": "계약 갱신",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "계약갱신서",
+    "description": "계약갱신서 양식"
+  }
+}

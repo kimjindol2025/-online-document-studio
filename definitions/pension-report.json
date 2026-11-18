@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "pension-report",
+  "slug": "pension-report",
+  "title": "국민연금신고서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "국민연금신고서를 작성하세요.",
+  "purpose": "국민 연금 신고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "국민연금신고서",
+    "description": "국민연금신고서 양식"
+  }
+}

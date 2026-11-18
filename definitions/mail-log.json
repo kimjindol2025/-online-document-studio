@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mail-log",
+  "slug": "mail-log",
+  "title": "우편물수발대장",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "우편물수발대장을 작성하세요.",
+  "purpose": "우편물 수발",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "우편물수발대장",
+    "description": "우편물수발대장 양식"
+  }
+}

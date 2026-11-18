@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "purchase-request",
+  "slug": "purchase-request",
+  "title": "구매요청서",
+  "category": "구매",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "구매요청서를 작성하세요.",
+  "purpose": "구매 요청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "구매요청서",
+    "description": "구매요청서 양식"
+  }
+}

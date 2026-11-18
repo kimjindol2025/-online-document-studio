@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "archive-request",
+  "slug": "archive-request",
+  "title": "자료요청서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "자료요청서를 작성하세요.",
+  "purpose": "자료 요청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "자료요청서",
+    "description": "자료요청서 양식"
+  }
+}

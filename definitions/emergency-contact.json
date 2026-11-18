@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "emergency-contact",
+  "slug": "emergency-contact",
+  "title": "비상연락망",
+  "category": "안전",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "비상연락망을 작성하세요.",
+  "purpose": "비상 연락",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "비상연락망",
+    "description": "비상연락망 양식"
+  }
+}

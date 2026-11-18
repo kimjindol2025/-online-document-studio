@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "document-retention",
+  "slug": "document-retention",
+  "title": "문서보존대장",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "문서보존대장을 작성하세요.",
+  "purpose": "문서 보존",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "문서보존대장",
+    "description": "문서보존대장 양식"
+  }
+}

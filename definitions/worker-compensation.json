@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "worker-compensation",
+  "slug": "worker-compensation",
+  "title": "산재보험신고서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "산재보험신고서를 작성하세요.",
+  "purpose": "산재 보험 신고",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "산재보험신고서",
+    "description": "산재보험신고서 양식"
+  }
+}

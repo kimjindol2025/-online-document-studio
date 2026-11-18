@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bonus-payment",
+  "slug": "bonus-payment",
+  "title": "상여금지급명세서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "상여금지급명세서를 작성하세요.",
+  "purpose": "상여금 지급",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "상여금지급명세서",
+    "description": "상여금지급명세서 양식"
+  }
+}

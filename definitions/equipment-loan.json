@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "equipment-loan",
+  "slug": "equipment-loan",
+  "title": "장비대여신청서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "장비대여신청서를 작성하세요.",
+  "purpose": "장비 대여",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "장비대여신청서",
+    "description": "장비대여신청서 양식"
+  }
+}

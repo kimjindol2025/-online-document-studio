@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "dispute-resolution",
+  "slug": "dispute-resolution",
+  "title": "분쟁조정합의서",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "분쟁조정합의서를 작성하세요.",
+  "purpose": "분쟁 조정",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "분쟁조정합의서",
+    "description": "분쟁조정합의서 양식"
+  }
+}

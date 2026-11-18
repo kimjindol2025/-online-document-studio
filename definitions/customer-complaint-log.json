@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "customer-complaint-log",
+  "slug": "customer-complaint-log",
+  "title": "고객불만처리대장",
+  "category": "고객",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "고객불만처리대장을 작성하세요.",
+  "purpose": "고객 불만 처리",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "고객불만처리대장",
+    "description": "고객불만처리대장 양식"
+  }
+}

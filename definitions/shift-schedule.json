@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "shift-schedule",
+  "slug": "shift-schedule",
+  "title": "교대근무표",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "교대근무표를 작성하세요.",
+  "purpose": "교대 근무표",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "교대근무표",
+    "description": "교대근무표 양식"
+  }
+}

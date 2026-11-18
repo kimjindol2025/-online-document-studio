@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "termination-notice",
+  "slug": "termination-notice",
+  "title": "계약해지통보서",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "계약해지통보서를 작성하세요.",
+  "purpose": "계약 해지",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "계약해지통보서",
+    "description": "계약해지통보서 양식"
+  }
+}

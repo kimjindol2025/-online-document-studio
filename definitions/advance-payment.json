@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "advance-payment",
+  "slug": "advance-payment",
+  "title": "선급금지급신청서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "선급금지급신청서를 작성하세요.",
+  "purpose": "선급금 지급",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "선급금지급신청서",
+    "description": "선급금지급신청서 양식"
+  }
+}

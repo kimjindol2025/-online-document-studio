@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "witness-statement",
+  "slug": "witness-statement",
+  "title": "진술서",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "진술서를 작성하세요.",
+  "purpose": "진술",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "진술서",
+    "description": "진술서 양식"
+  }
+}
