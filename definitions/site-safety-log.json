@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "site-safety-log",
+  "slug": "site-safety-log",
+  "title": "현장안전일지",
+  "category": "건설",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "현장안전일지를 작성하세요.",
+  "purpose": "현장 안전",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "현장안전일지",
+    "description": "현장안전일지 양식"
+  }
+}

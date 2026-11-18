@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "work-order",
+  "slug": "work-order",
+  "title": "작업지시서",
+  "category": "건설",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "작업지시서를 작성하세요.",
+  "purpose": "작업 지시",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "작업지시서",
+    "description": "작업지시서 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "policy-acknowledgment",
+  "slug": "policy-acknowledgment",
+  "title": "사규확인서",
+  "category": "법률",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "사규확인서를 작성하세요.",
+  "purpose": "사규 확인",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "사규확인서",
+    "description": "사규확인서 양식"
+  }
+}

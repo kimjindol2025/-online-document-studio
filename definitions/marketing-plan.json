@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "marketing-plan",
+  "slug": "marketing-plan",
+  "title": "마케팅계획서",
+  "category": "마케팅",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "마케팅계획서를 작성하세요.",
+  "purpose": "마케팅 계획",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "마케팅계획서",
+    "description": "마케팅계획서 양식"
+  }
+}

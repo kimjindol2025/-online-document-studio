@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "office-supply-request",
+  "slug": "office-supply-request",
+  "title": "사무용품신청서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "사무용품신청서를 작성하세요.",
+  "purpose": "사무용품 신청",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "사무용품신청서",
+    "description": "사무용품신청서 양식"
+  }
+}

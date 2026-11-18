@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "bank-reconciliation",
+  "slug": "bank-reconciliation",
+  "title": "은행잔액조정표",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "은행잔액조정표를 작성하세요.",
+  "purpose": "은행 잔액 조정",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "은행잔액조정표",
+    "description": "은행잔액조정표 양식"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "promotion-request",
+  "slug": "promotion-request",
+  "title": "승진추천서",
+  "category": "인사",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "승진추천서를 작성하세요.",
+  "purpose": "승진 추천",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "승진추천서",
+    "description": "승진추천서 양식"
+  }
+}

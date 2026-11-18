@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "sales-forecast",
+  "slug": "sales-forecast",
+  "title": "매출예측표",
+  "category": "영업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "매출예측표를 작성하세요.",
+  "purpose": "매출 예측",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "매출예측표",
+    "description": "매출예측표 양식"
+  }
+}

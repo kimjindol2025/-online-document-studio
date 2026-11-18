@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "depreciation-schedule",
+  "slug": "depreciation-schedule",
+  "title": "감가상각표",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "감가상각표를 작성하세요.",
+  "purpose": "감가 상각",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "감가상각표",
+    "description": "감가상각표 양식"
+  }
+}

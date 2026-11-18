@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "tax-withholding",
+  "slug": "tax-withholding",
+  "title": "원천징수세액계산서",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "원천징수세액계산서를 작성하세요.",
+  "purpose": "원천 징수",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "원천징수세액계산서",
+    "description": "원천징수세액계산서 양식"
+  }
+}

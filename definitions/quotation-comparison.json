@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "quotation-comparison",
+  "slug": "quotation-comparison",
+  "title": "견적비교표",
+  "category": "영업",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "견적비교표를 작성하세요.",
+  "purpose": "견적 비교",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "견적비교표",
+    "description": "견적비교표 양식"
+  }
+}

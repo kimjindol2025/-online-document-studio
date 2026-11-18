@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "vendor-invoice",
+  "slug": "vendor-invoice",
+  "title": "거래처청구서",
+  "category": "구매",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "거래처청구서를 작성하세요.",
+  "purpose": "거래처 청구",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "거래처청구서",
+    "description": "거래처청구서 양식"
+  }
+}

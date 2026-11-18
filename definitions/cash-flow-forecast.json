@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "cash-flow-forecast",
+  "slug": "cash-flow-forecast",
+  "title": "현금흐름예측표",
+  "category": "경리",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "현금흐름예측표를 작성하세요.",
+  "purpose": "현금 흐름 예측",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "현금흐름예측표",
+    "description": "현금흐름예측표 양식"
+  }
+}

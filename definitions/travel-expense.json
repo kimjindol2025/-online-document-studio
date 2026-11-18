@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "travel-expense",
+  "slug": "travel-expense",
+  "title": "출장비정산서",
+  "category": "총무",
+  "status": "public",
+  "icon": "file-text",
+  "summary": "출장비정산서를 작성하세요.",
+  "purpose": "출장 비용",
+  "fields": [
+    {
+      "id": "documentNo",
+      "label": "문서번호",
+      "type": "text"
+    },
+    {
+      "id": "date",
+      "label": "날짜",
+      "type": "date"
+    },
+    {
+      "id": "content",
+      "label": "내용",
+      "type": "textarea"
+    }
+  ],
+  "seo": {
+    "title": "출장비정산서",
+    "description": "출장비정산서 양식"
+  }
+}
